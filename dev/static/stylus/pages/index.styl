@@ -12,16 +12,17 @@
 
     &__heading
       width: 945px
-      margin-bottom: 60px
+      margin-bottom: 40px
 
       font-family: 'Muller Bold'
       font-size: 48px
+      line-height: 58px
       color: white
       text-align: center
 
     &__text
       width: 848px
-      margin-bottom: 60px
+      margin-bottom: 50px
 
       font-size: 18px
       line-height: 28px
@@ -33,6 +34,44 @@
 
     .slick-arrow
       display: none !important
+
+    .slick-dots
+      width: 100%
+      position: absolute
+      bottom: 62px
+      display: flex
+      justify-content: center
+      align-items: center
+
+      li
+        margin-right: 18px
+
+        font-size: 0
+        line-height: 0
+
+        &:last-child
+          margin-right: 0
+
+      button
+        width: 6px
+        height: 6px
+        padding: 0
+        border-radius 50%
+        border none
+        background-color alpha(white, 0.3)
+        cursor: pointer
+
+        @extend .transition
+
+        &:hover
+          background-color: white
+
+      .slick-active
+
+        button
+          width: 10px
+          height: 10px
+          background-color: white;
 
     &__prev
       position: absolute

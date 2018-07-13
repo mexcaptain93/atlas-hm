@@ -7,7 +7,7 @@ function indexSlider() {
 
     if (indexSlider.length > 0) {
         indexSlider.slick({
-
+            dots: true
         });
 
         $('.js-index-slider-prev').on('click', function (e) {
