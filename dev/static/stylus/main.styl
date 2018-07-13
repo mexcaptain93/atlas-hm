@@ -24,7 +24,7 @@ p
 	margin 0
 
 a
-	color black
+	color inherit
 	text-decoration none
 
 audio,
@@ -49,18 +49,24 @@ button
 *, *:before, *:after
 	box-sizing border-box
 
-.wrapper
-	display flex
-	flex-direction column
-	height 100%
+.body
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+
+.container
+	width: containerWidth
+	margin: 0 auto
 
 .content
-	flex 1 0 auto
-
+	flex-grow: 1
 
 //Модули
 @import "modules/modules.styl"
 
+// Компоненты
+@import 'components/components.styl'
+
 // СТРАНИЦЫ
 // Главная страница
-@import 'pages/index/index.styl'
+@import 'pages/index.styl'

@@ -1,0 +1,47 @@
+.header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: blue_base
+  padding: 25px 50px
+
+  &__logo
+    width: 370px
+
+  &__menu
+
+    .menu
+
+      &__list
+        display: flex
+
+      &__item
+        @extends .bold
+        margin-right: 40px
+
+        color: blue_light2
+        @extend .transition
+
+        &:hover
+          color: gray_light2
+
+        &:last-child
+          margin-right: 0
+
+  &__phone
+    display: flex
+    width: 370px
+    align-items: center
+    justify-content flex-end
+
+    .phone
+
+      &__text
+        margin-right: 25px
+
+        font-family: 'Muller Medium'
+        font-size: 18px
+        color: gray_light2
+        @extend .transition
+
+        @extend .hover-opacity

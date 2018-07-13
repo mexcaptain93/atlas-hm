@@ -1,0 +1,53 @@
+.footer
+  padding: 60px 0
+  background-color: blue_dark2
+
+  &__top
+    border-bottom: 1px solid #1e2e56
+    padding-bottom: 61px
+
+    .container
+      display: flex
+      justify-content: space-between
+
+  &__bottom
+    padding-top: 60px
+
+    .container
+      display: flex
+      justify-content: space-between
+
+  &__logo
+    margin-bottom: 35px
+
+  &__address
+    font-size: 14px
+    color: alpha(gray_light2, .3)
+
+  &__copy
+    font-size: 14px
+    color: alpha(gray_light2, .3)
+
+    .copy
+
+      &__year
+        font-family: 'Muller Bold'
+
+  &__phone
+    margin-bottom: 30px
+    @extend .transition
+    @extend .hover-opacity
+
+    font-family: 'Muller Medium'
+    font-size: 18px
+    color: gray_light2
+    text-align: right
+
+  &__privacy-link
+    @extend .transition
+    @extend .hover-opacity
+
+    font-family: 'Muller Bold'
+    font-size: 14px
+    color: gray_light2
+

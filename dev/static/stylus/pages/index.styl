@@ -1,0 +1,50 @@
+.index
+
+  .slide
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 760px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+
+    &__heading
+      width: 945px
+      margin-bottom: 60px
+
+      font-family: 'Muller Bold'
+      font-size: 48px
+      color: white
+      text-align: center
+
+    &__text
+      width: 848px
+      margin-bottom: 60px
+
+      font-size: 18px
+      line-height: 28px
+      color: white
+      text-align: center
+
+  .slider
+    position: relative
+
+    .slick-arrow
+      display: none !important
+
+    &__prev
+      position: absolute
+      top: 50%
+      left: "calc((100% - %s) / 2)" % containerWidth
+      transform: translate(-100%, -50%)
+      z-index: 2
+
+    &__next
+      position: absolute
+      top: 50%
+      right: "calc((100% - %s) / 2)" % containerWidth
+      transform: translate(100%, -50%)
+      z-index: 2
+
