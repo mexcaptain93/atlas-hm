@@ -55,8 +55,17 @@ section
   width: containerWidth
   margin: 0 auto
 
-.content
+.main
   flex-grow: 1
+
+  &_with-sidebar
+    display: flex
+    align-items: stretch
+
+  &__sidebar
+    background-color: gray_light2
+
+
 
 //Модули
 @import "modules/modules.styl"

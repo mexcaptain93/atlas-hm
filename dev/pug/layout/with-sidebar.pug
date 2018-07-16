@@ -20,8 +20,11 @@ html(lang="ru-RU")
     body(class=pageClass)
         .body
             include ../modules/header
-            .main
-                block content
+            .main.main_with-sidebar
+                .main__sidebar
+                    include ../modules/sidebar
+                .main__content
+                    block content
             include ../modules/footer
         script(src="static/js/jquery.js")
         script(src="static/js/main.js")

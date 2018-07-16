@@ -1,0 +1,67 @@
+.sidebar
+  width: 255px
+  min-height calc(100vh - 100px)
+  position: sticky
+  top: 0
+  display: flex
+  flex-direction: column
+  background-color: gray_light2
+  border: 1px solid gray2
+
+  &__top
+    padding: 60px 39px
+    border-bottom: 1px solid gray2
+
+  &__heading
+    font-family: 'Muller Bold'
+    font-size: 22px
+    line-height: 30px
+    color: gray_dark
+
+  &__middle
+    display: flex
+    align-items: center
+    flex-grow: 1
+    padding: 0 39px
+
+  &__bottom
+    padding: 60px 39px
+    border-top: 1px solid gray2
+
+  &__back
+    display: flex
+    align-items: center
+
+    @extend .transition
+    @extend .hover-opacity
+
+    .back
+
+      &__arrow
+        margin-right: 31px
+
+      &__text
+        padding-top: 5px
+
+        font-family: 'Muller Bold'
+        font-size: 16px
+        color: gray_dark
+
+  &__item
+    font-family 'Muller Regular'
+    font-size: 16px
+    line-height: 30px
+    color: #515669
+
+    &:hover
+      font-family: 'Muller Medium'
+
+    &_active
+      font-family: 'Muller Bold'
+      color: blue_base
+
+      &:hover
+        font-family: 'Muller Bold'
+
+
+
