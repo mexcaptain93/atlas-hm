@@ -24,7 +24,10 @@ html(lang="ru-RU")
                 .main__sidebar
                     include ../modules/sidebar
                 .main__content
-                    block content
+                    .main__title
+                        include ../modules/title
+                    .content
+                        block content
             include ../modules/footer
         script(src="static/js/jquery.js")
         script(src="static/js/main.js")

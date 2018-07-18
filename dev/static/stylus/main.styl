@@ -52,7 +52,7 @@ section
   min-height: 100vh
 
 .container
-  width: containerWidth
+  width: containerWidthIndex
   margin: 0 auto
 
 .main
@@ -62,8 +62,18 @@ section
     display: flex
     align-items: stretch
 
+    .content
+      padding-top: 79px
+      padding-bottom: 36px
+
   &__sidebar
     background-color: gray_light2
+
+  &__content
+    width: 100%
+
+  .container
+    width: containerWidth
 
 
 
@@ -76,3 +86,9 @@ section
 // СТРАНИЦЫ
 // Главная страница
 @import 'pages/index.styl'
+
+//Компания
+@import 'pages/company.styl'
+
+//Миссия и ценности
+@import 'pages/mission.styl'

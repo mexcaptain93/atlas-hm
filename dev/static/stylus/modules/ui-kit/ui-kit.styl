@@ -65,10 +65,11 @@ p
   font-size: 18px
   line-height: 28px
   color: gray_base
+  letter-spacing: 0
 
-  &.sub
-    font-size: 16px
-    line-height: 26px
+.sub
+  font-size: 16px
+  line-height: 30px
 
 .breadcrumb
   font-size: 14px
@@ -138,3 +139,107 @@ p
     height: 40px
     background-color: transparent
     border: 1px solid gray2
+
+.heading
+  margin-bottom: 44px
+
+.text
+  margin-bottom: 60px
+
+.pointed
+  @extend .capital-14
+
+  color: blue_base
+
+.navigation
+  display: flex
+  justify-content: space-between
+  padding: 60px 0
+  border-top 1px solid gray2
+
+  .sub
+    color: gray_base
+
+  .bold
+    color: blue_base
+
+  &__prev, &__next
+
+    a
+      display: flex
+      align-items: center
+
+      @extend .transition
+      @extend .hover-opacity
+
+  &__prev
+
+    .arrow
+      margin-right: 30px
+
+  &__next
+
+    .arrow
+      margin-left: 30px
+
+  &__next a
+    display: flex
+
+.colored-heading
+  @extend .capital-18
+  line-height: 20px
+
+  background-color: gray_light2
+  padding: 16px 0 14px 30px
+  margin-bottom: 30px
+
+  &_green
+    border-left: 5px solid green_base
+
+  &_blue
+    border-left: 5px solid blue_base
+
+  &_orange
+    border-left: 5px solid orange_base
+
+  &_violet
+    border-left: 5px solid blue_dark
+
+.colored-item
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+  font-family: 'Muller Medium'
+  font-size: 16px
+  color: gray_dark
+
+  &::before
+    content: ''
+    margin-right: 30px
+    width: 26px
+    height: 26px
+    background-image: url('../img/svg/arrow-white.svg')
+    background-repeat no-repeat
+    background-position center center
+    border-radius 50%
+
+  &_green
+
+    &::before
+      background-color: green_base
+
+  &_blue
+
+    &::before
+      background-color: blue_base
+
+  &_orange
+
+    &::before
+      background-color: orange_base
+
+  &_violet
+
+    &::before
+      background-color: blue_dark

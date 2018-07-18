@@ -6,7 +6,7 @@ header.header
         .menu__list
             .menu__item(class= pageClass === "index" ? "menu__item_active":"")
                 a(href='/') Главная
-            .menu__item(class= pageClass === "company" ? "menu__item_active":"")
+            .menu__item(class= (pageClass === "company" || pageClass === "mission") ? "menu__item_active":"")
                 a(href='/company.html') Компания
             .menu__item
                 a(href='#') Владельцам

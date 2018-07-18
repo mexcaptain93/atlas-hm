@@ -1,0 +1,48 @@
+.company
+
+  &__pointed
+    margin-bottom: 60px
+
+  &__reasons
+    margin-bottom: 40px
+
+    .reasons
+
+      &__list
+        display: flex
+        flex-wrap wrap
+        counter-reset: reason
+
+      &__item
+        display: flex
+        align-items: center
+        width: calc(50% - 15px)
+        margin-bottom: 60px
+
+        font-family: 'Muller Medium'
+        font-size: 16px
+        line-height: 30px
+        color: gray_dark
+
+        &::before
+          display: flex
+          flex-grow: 0;
+          flex-shrink: 0;
+          align-items: center
+          justify-content: center
+          width: 68px
+          height: 68px
+          margin-right: 30px
+          border-radius 50%
+          background-color: green_base
+
+          content: '0' counter(reason)
+          counter-increment: reason
+
+          font-size: 18px
+          line-height: 32px
+          color: white
+          font-family: 'Muller Bold'
+
+        &:nth-child(odd)
+          margin-right: 30px
