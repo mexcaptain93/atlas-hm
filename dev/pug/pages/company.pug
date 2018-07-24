@@ -4,6 +4,7 @@ block variables
     - var title = 'Atlas Management'
     - var pageHeading = 'О компании'
     - var pageClass = 'company'
+    - var parentSection = 'Компания'
 
 block breadcrumbs
     .breadcrumbs__item.breadcrumb
@@ -11,36 +12,37 @@ block breadcrumbs
     .breadcrumbs__item.breadcrumb
         a(href='#') Компания
 
+block sidebar
+    .sidebar__list
+        .sidebar__item.sidebar__item_active
+            a(href='/company.html') О компании
+        .sidebar__item
+            a(href='/mission.html') Миссия и ценности
+        .sidebar__item
+            a(href='/team.html') Команда
+
 block content
     .container
         .company__heading.heading
-            span.like-h3 Atlas Hotel Management:
+            h3.like-h3 Atlas Hotel Management:
         .company__text.text
             p Мы - молодая быстроразвивающаяся компания в сфере гостиничного бизнеса. Наша команда имеет опыт в управлении собственными отелями более 10 лет. Огромное желание и полученные навыки позволили нам организовать в 2015 году управляющую компанию Atlas Hotel management
-        .company__pointed.pointed
-            span 8 причин почему именно мы:
+        .company__pointed.pointed 8 причин почему именно мы:
         .company__reasons.reasons
             .reasons__list
-                .reasons__item.reason
-                    span Анализируем, прогнозируем и гарантируем количественные показатели эффективности объекта.
-                .reasons__item.reason
-                    span Эффективно лавируем в условиях меняющегося рынка и потребностей клиентов, при этом увеличиваем рейтинги
-                .reasons__item.reason
-                    span Использование современных IT – технологий и систем управления, международных стандартов операционной деятельности позволяет нам эффективно управлять и добиваться успехов
-                .reasons__item.reason
-                    span Четкое взаимодействие с партнерами и простые, понятные, открытые схемы сотрудничества.
-                .reasons__item.reason
-                    span В нашей компании работают высококвалифицированные профессионалы, знающие свое дело.
-                .reasons__item.reason
-                    span Скрупулезность и тщательность в любом вопросе.
-                .reasons__item.reason
-                    span Всегда на шаг впереди запросов клиента: можем проконсультировать даже в вопросах, не предусмотренных в договоре
-                .reasons__item.reason
-                    span Несем ответственность за конечный результат
+                .reasons__item.reason Анализируем, прогнозируем и гарантируем количественные показатели эффективности объекта.
+                .reasons__item.reason Эффективно лавируем в условиях меняющегося рынка и потребностей клиентов, при этом увеличиваем рейтинги
+                .reasons__item.reason Использование современных IT – технологий и систем управления, международных стандартов операционной деятельности позволяет нам эффективно управлять и добиваться успехов
+                .reasons__item.reason Четкое взаимодействие с партнерами и простые, понятные, открытые схемы сотрудничества.
+                .reasons__item.reason В нашей компании работают высококвалифицированные профессионалы, знающие свое дело.
+                .reasons__item.reason Скрупулезность и тщательность в любом вопросе.
+                .reasons__item.reason Всегда на шаг впереди запросов клиента: можем проконсультировать даже в вопросах, не предусмотренных в договоре
+                .reasons__item.reason Несем ответственность за конечный результат
         .company__text.text
             p В настоящее время в управлении Управляющей компании ATLAS Hotel management находится 4 объекта, находящихся в Анапе. На сегодняшний день наша компания динамично осваивает новые рынки.
 
-        .navigation
+    .navigation
+        .container
             .navigation__prev
                 a(href='#')
                     span.arrow.arrow_prev.arrow_small

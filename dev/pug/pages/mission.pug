@@ -4,6 +4,7 @@ block variables
     - var title = 'Atlas Management – Миссия и ценности'
     - var pageHeading = 'Миссия и ценности'
     - var pageClass = 'mission'
+    - var parentSection = 'Компания'
 
 block breadcrumbs
     .breadcrumbs__item.breadcrumb
@@ -11,47 +12,46 @@ block breadcrumbs
     .breadcrumbs__item.breadcrumb
         a(href='#') Компания
 
+block sidebar
+    .sidebar__list
+        .sidebar__item
+            a(href='/company.html') О компании
+        .sidebar__item.sidebar__item_active
+            a(href='/mission.html') Миссия и ценности
+        .sidebar__item
+            a(href='/team.html') Команда
+
 block content
     .container
         .heading
-            span.like-h3 Миссия ATLAS:
+            h3.like-h3 Миссия ATLAS:
         .text
             p Изо  дня в день доказывать своими действиями, как можно большему количеству  людей в мире, что Россия более гостеприимная страна, чем считается и что Российский сервис в сфере гостеприимства, стремится стать  привлекательнее западного. Наша миссия определяет смысл существования ATLAS на рынке России и  устанавливает амбициозную цель - стать лучшей сервисной компанией в стране! Такие цели достигаются только командой единомышленников, которых объединяет общая система ценностей.
-        .colored-heading.colored-heading_green
-            span Наши ценности
+        .colored-heading.colored-heading_green Наши ценности
         .mission__list
-            .mission__item.colored-item.colored-item_green
-                span Ядро, которое всех нас притягивает
-            .mission__item.colored-item.colored-item_blue
-                span Атмосфера, которая защищает нас от всех угроз извне
-            .mission__item.colored-item.colored-item_orange
-                span Полярная звезда, которая не дает нам сбиться с пути выполнения миссии
-            .mission__item.colored-item.colored-item_violet
-                span Ориентиры, помогающие ежедневно принимать правильные решения
-        .mission__pointed.pointed
-            span Над ними не властно время, они постоянны и не меняются
-        .colored-heading.colored-heading_blue
-            span Наши сотрудники
+            .mission__item.colored-item.colored-item_green Ядро, которое всех нас притягивает
+            .mission__item.colored-item.colored-item_blue Атмосфера, которая защищает нас от всех угроз извне
+            .mission__item.colored-item.colored-item_orange Полярная звезда, которая не дает нам сбиться с пути выполнения миссии
+            .mission__item.colored-item.colored-item_violet Ориентиры, помогающие ежедневно принимать правильные решения
+        .mission__pointed.pointed Над ними не властно время, они постоянны и не меняются
+        .colored-heading.colored-heading_blue Наши сотрудники
         .text
             p.sub В основе заложен принцип «клиентоориентированность через сотрудникоориентированность» #[br] Мы  убеждены в том, что необходимо учитывать потребности сотрудников в  первую очередь, помогать им достигать личные и профессиональные цели и  тогда цели компании будут достигаться автоматически, а сотрудники будут  хотеть оказывать хороший сервис.
-        .colored-heading.colored-heading_orange
-            span Наши принципы
+        .colored-heading.colored-heading_orange Наши принципы
         .text
             p.sub Мы  ценим совпадение наших принципов с естественными вселенскими законами,  прописными истинами, которые не требуют доказательств и объяснений.  Благодаря этому мы не пытаемся плыть против течения, а поступаем  логично, оптимально и эффективно. Все наши действия  подчинены здравому  смыслу и соответственно ускоряют получение результата в достижении общих  целей.
-        .colored-heading.colored-heading_violet
-            span Доверие к нам
+        .colored-heading.colored-heading_violet Доверие к нам
         .text
             p.sub Не придумали еще той выгоды, ради которой мы поступимся своими убеждениями, качествами и принципами! #[br] В основе заложен принцип «Мы либо строим хорошие отношения со всеми, либо не строим вовсе». Фундамент,  хороших и долгих отношений это доверие. Доверие построено на  искренности намерений и правде! Когда не обманываешь и не пытаешься  обмануть, когда даешь и выполняешь обещания, в первую очередь это  относится к самому себе. Честность, порядочность, добросовестность  всегда и во всем!
-        .colored-heading.colored-heading_green
-            span Меняемся для вас
+        .colored-heading.colored-heading_green Меняемся для вас
         .text
             p.sub Инновации и саморазвитие это наша страсть. #[br] Мир очень быстро меняется. То что вчера казалось лучшим, сегодня обычное. #[br] Мы любим постоянные изменения и обновления. Мы всегда открыты к переменам. #[br] Необходимо успевать меняться, чтобы не отстать от этого мира и не остаться на обочине.
-        .colored-heading.colored-heading_blue
-            span Тянемся к совершенству
+        .colored-heading.colored-heading_blue Тянемся к совершенству
         .text
             p.sub Если меняться, то тянуться только к идеалу, эталону. #[br] Каждый день мы продумываем каждую мелочь, чтобы сервис был на высоте и мы могли предвосхитить наших гостей.
 
-        .navigation
+    .navigation
+        .container
             .navigation__prev
                 a(href='#')
                     span.arrow.arrow_prev.arrow_small

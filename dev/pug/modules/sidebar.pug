@@ -1,15 +1,9 @@
 .sidebar
     .sidebar__top
         .sidebar__heading
-            span Компания
+            span #{parentSection}
     .sidebar__middle
-        .sidebar__list
-            .sidebar__item.sidebar__item_active
-                a(href='/company.html') О компании
-            .sidebar__item
-                a(href='/mission.html') Миссия и ценности
-            .sidebar__item
-                a(href='/team.html') Команда
+        block sidebar
     .sidebar__bottom
         a(href='#').sidebar__back.back
             span.arrow.arrow_prev.arrow_small.back__arrow

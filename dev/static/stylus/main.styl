@@ -62,9 +62,17 @@ section
     display: flex
     align-items: stretch
 
-    .content
-      padding-top: 79px
-      padding-bottom: 36px
+    .container
+      width: containerWidthSidebar
+
+  .content
+    padding-top: 79px
+    height: calc(100% - 136px)
+    display: flex
+    flex-direction: column
+
+    & > .container
+      flex-grow: 1
 
   &__sidebar
     background-color: gray_light2
@@ -72,8 +80,6 @@ section
   &__content
     width: 100%
 
-  .container
-    width: containerWidth
 
 
 
@@ -95,3 +101,9 @@ section
 
 //Команда
 @import 'pages/team.styl'
+
+//Владельцам
+@import 'pages/owners.styl'
+
+//Услуги
+@import 'pages/services.styl'

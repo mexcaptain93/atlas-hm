@@ -1,0 +1,112 @@
+.owners
+
+  .main .content
+    padding-bottom: 0
+
+  &__subheading
+    margin-bottom: 43px
+
+    &.capital-14
+      margin-bottom: 53px
+
+      text-align: center
+
+    &_last.capital-14
+      margin-bottom: 113px
+
+  &__two-columns
+    column-count: 2
+    column-gap 30px
+    margin-bottom: 50px
+
+    &_meaning
+      margin-bottom: 28px
+
+    &_requirements
+      margin-bottom: 63px
+
+    &_custom
+      display: flex
+      column-count auto
+
+      .two-cols
+
+        &__item
+          width: 50%
+          flex-shrink: 0
+
+
+    p
+      line-height: 30px
+
+      &.like-h4
+        line-height: 36px
+
+  &__pointed
+    margin-bottom: 54px
+
+  &__blocks
+    display: flex
+    justify-content: space-between
+    margin-bottom: 54px
+
+  .block
+    display: flex
+    width: 555px
+    padding: 64px 40px 54px
+    background-color: blue_base
+
+    &__photo
+      flex-shrink: 0
+      width: 68px
+      height: 68px
+      border: 1px solid white
+      border-radius 50%
+
+    &__right
+      padding-left: 24px
+
+    &__title
+      margin-top: -5px
+      margin-bottom: 11px
+      @extend .capital-18
+
+      color: white
+
+    &__descr
+      font-size: 16px
+      line-height: 26 px
+      color: white
+
+  &__table
+    margin-bottom: 60px
+
+  .table
+    border: 1px solid #eaeaea
+
+    &__row:last-child .table__td
+      border-bottom none
+
+    &__td
+      border-bottom: 1px solid #eaeaea
+      border-right: 1px solid #eaeaea
+      padding: 31px 40px 28px
+
+      font-size: 16px
+      line-height: 30px
+
+      &:last-child
+        border-right: none
+
+  .two-cols
+
+    &__heading
+      margin-bottom: 23px
+
+    &__item
+
+      &:nth-child(2)
+        padding-left: 15px
+
+  .navigation
+    margin-bottom: 3px

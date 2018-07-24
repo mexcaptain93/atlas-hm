@@ -124,12 +124,13 @@ p
   height: 54px
   background-color: white
   background-repeat no-repeat
-  background-position center center
+  background-position 16px center
   border-radius: 30px
   cursor: pointer
 
   &_prev
     background-image: url('../img/svg/arrow-prev.svg')
+    background-position 12px center
 
   &_next
     background-image: url('../img/svg/arrow-next.svg')
@@ -139,6 +140,27 @@ p
     height: 40px
     background-color: transparent
     border: 1px solid gray2
+
+  &_white
+
+    &.arrow
+
+      &_prev
+        background-image: url('../img/svg/arrow-prev-white.svg')
+
+      &_next
+        background-image: url('../img/svg/arrow-next-white.svg')
+
+  &_gray
+
+    &.arrow
+
+      &_prev
+        background-image: url('../img/svg/arrow-prev-gray.svg')
+
+      &_next
+        background-image: url('../img/svg/arrow-next-gray.svg')
+
 
 .heading
   margin-bottom: 44px
@@ -151,11 +173,20 @@ p
 
   color: blue_base
 
+  &_bordered
+    border: 10px solid gray_light2
+    padding: 47px 88px
+
+    font-size: 18px
+    line-height: 28px
+    letter-spacing: 0.7px
+
 .navigation
-  display: flex
-  justify-content: space-between
-  padding: 60px 0
-  border-top 1px solid gray2
+  .container
+    display: flex
+    justify-content: space-between
+    padding: 60px 0
+    border-top 1px solid gray2
 
   .sub
     color: gray_base
@@ -243,3 +274,16 @@ p
 
     &::before
       background-color: blue_dark
+
+.table
+  display: table
+
+  &__row
+    display: table-row
+
+  &__td
+    display: table-cell
+    width: 50%
+
+.map
+  height: 450px

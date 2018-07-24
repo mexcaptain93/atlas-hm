@@ -1,0 +1,57 @@
+extends ../layout/with-sidebar
+
+block variables
+    - var title = 'Atlas Management'
+    - var pageHeading = 'Услуги'
+    - var pageClass = 'services'
+    - var parentSection = 'Услуги'
+
+block breadcrumbs
+    .breadcrumbs__item.breadcrumb
+        a(href='#') Главная
+    .breadcrumbs__item.breadcrumb
+        a(href='#') Услуги
+
+block sidebar
+    .sidebar__list
+        .sidebar__item.sidebar__item_active
+            a(href='/services.html') Услуги
+        .sidebar__item
+            a(href='/mission.html') Управление отелями
+        .sidebar__item.sidebar__item_inactive
+            a(href='/team.html') Предпроектное консультирование
+        .sidebar__item.sidebar__item_inactive
+            a(href='/team.html') Техническое сопровождение
+
+block content
+    .container
+        .services__heading.like-h2 Услуги нашей компании состоят из трех основных #[br] направлений:
+        .services__list
+            a.services__item.service(href='#')
+                .service__title Управление #[br] отелями
+                .service__arrow.arrow.arrow_next.arrow_small
+            a.services__item.service.service_inactive(href='#')
+                .service__title Предпроектное #[br] консультирование
+                .service__arrow.arrow.arrow_next.arrow_small
+            a.services__item.service.service_inactive(href='#')
+                .service__title Техническое #[br] сопровождение
+                .service__arrow.arrow.arrow_next.arrow_small
+        .services__text.text
+            p На сегодняшний день #[span.bold предпроектное консультирование и техническое сопровождение находятся в стадии разработки и подготовки], а услуга - управление отелями успешно реализована и имеет эффективные результаты, которые можно посмотреть в нашем портфолио.
+
+
+    .navigation
+        .container
+            .navigation__prev
+                a(href='#')
+                    span.arrow.arrow_prev.arrow_small
+                    span.bold Назад
+            .navigation__next
+                a(href='#')
+                    span.sub Далее:&nbsp;
+                    span.bold Управление отелями
+                    span.arrow.arrow_next.arrow_small.
+
+
+
+
