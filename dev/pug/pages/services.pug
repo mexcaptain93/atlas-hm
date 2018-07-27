@@ -1,23 +1,23 @@
 extends ../layout/with-sidebar
 
 block variables
-    - var title = 'Atlas Management'
+    - var title = 'Atlas Management – Услуги'
     - var pageHeading = 'Услуги'
     - var pageClass = 'services'
     - var parentSection = 'Услуги'
 
 block breadcrumbs
     .breadcrumbs__item.breadcrumb
-        a(href='#') Главная
+        a(href='/') Главная
     .breadcrumbs__item.breadcrumb
-        a(href='#') Услуги
+        a(href='/services.html') Услуги
 
 block sidebar
     .sidebar__list
         .sidebar__item.sidebar__item_active
             a(href='/services.html') Услуги
         .sidebar__item
-            a(href='/mission.html') Управление отелями
+            a(href='/services-management.html') Управление отелями
         .sidebar__item.sidebar__item_inactive
             a(href='/team.html') Предпроектное консультирование
         .sidebar__item.sidebar__item_inactive
@@ -25,9 +25,9 @@ block sidebar
 
 block content
     .container
-        .services__heading.like-h2 Услуги нашей компании состоят из трех основных #[br] направлений:
+        h2.services__heading.like-h2 Услуги нашей компании состоят из трех основных #[br] направлений:
         .services__list
-            a.services__item.service(href='#')
+            a.services__item.service(href='/services-management.html')
                 .service__title Управление #[br] отелями
                 .service__arrow.arrow.arrow_next.arrow_small
             a.services__item.service.service_inactive(href='#')

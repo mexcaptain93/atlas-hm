@@ -6,14 +6,14 @@ header.header
         .menu__list
             .menu__item(class= pageClass === "index" ? "menu__item_active":"")
                 a(href='/') Главная
-            .menu__item(class= (pageClass === "company" || pageClass === "mission" || pageClass === "team") ? "menu__item_active":"")
+            .menu__item(class= parentSection === "Компания" ? "menu__item_active":"")
                 a(href='/company.html') Компания
             .menu__item(class= pageClass === "owners" ? "menu__item_active":"")
                 a(href='/owners.html') Владельцам
-            .menu__item
+            .menu__item(class= parentSection === "Услуги" ? "menu__item_active":"")
                 a(href='/services.html') Услуги
-            .menu__item
-                a(href='#') Портфолио
+            .menu__item(class= pageClass === "portfolio" || pageClass == 'hotel' ? "menu__item_active":"")
+                a(href='/portfolio.html') Портфолио
             .menu__item
                 a(href='#') Контакты
     .header__phone.phone

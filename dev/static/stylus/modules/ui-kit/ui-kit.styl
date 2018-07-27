@@ -124,13 +124,12 @@ p
   height: 54px
   background-color: white
   background-repeat no-repeat
-  background-position 16px center
+  background-position center center
   border-radius: 30px
   cursor: pointer
 
   &_prev
     background-image: url('../img/svg/arrow-prev.svg')
-    background-position 12px center
 
   &_next
     background-image: url('../img/svg/arrow-next.svg')
@@ -140,6 +139,11 @@ p
     height: 40px
     background-color: transparent
     border: 1px solid gray2
+    background-position 16px center
+
+    &.arrow_prev
+      background-position 12px center
+
 
   &_white
 

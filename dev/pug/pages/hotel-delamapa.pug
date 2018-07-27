@@ -1,0 +1,68 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Atlas Management – De La Mapa'
+    - var pageClass = 'hotel'
+    - var pageHeading = 'Портфолио'
+
+block breadcrumbs
+    .breadcrumbs__item.breadcrumb
+        a(href='/') Главная
+    .breadcrumbs__item.breadcrumb
+        a(href='/portfolio.html') Портфолио
+
+
+block content
+    .container
+        .hotel__name.like-h2 Отель De La Mapa
+        .hotel__text
+            p Отель Де ла мапа расположен в центре города – курорта Анапа. Он смешанного типа круглогодичного функционирования (в летний период является курортным и в межсезонье позиционируется как бизнес отель). В отеле 102 номера различных категорий, конференц-зал на 105 посадочных мест, имеется профессиональное оборудование для организации мероприятий.
+            p Полная реновация и реконструкция отеля произведена в 2006 году. Отель Де ла мапа включает полный пакет услуг и предлагает гостям пляж премиум класса «Золотая бухта».
+        .hotel__photo
+            img(src='/static/img/content/hotel-delamapa.jpg')
+        .hotel__data
+            .like-h4 Анализ показателей за 2014 – 2017 г.г.
+            p.sub Увеличение собственных продаж и уменьшение продаж туроператорами и booking, и как следствие уменьшение затрат на агентское вознаграждение
+            .capital-14 Доли продаж отель Де ла мапа:
+            img(src='/static/img/content/diagram-delamapa.jpg')
+            ul
+                li Наблюдается увеличение доходов за 4 года, в 2017 году рост составляет 54% по отношению к 2014 году за счет стабильной загрузки, маркетинга продаж и профессионального ценообразования.
+                li Оптимизация операционных расходов составляет 6% за счет оптовых закупок по сети и эффективного управления отелем.
+                li Валовая прибыль значительно выросла, за 2017 год по отношению к 2014 году увеличилась на 83 %
+                li Как результат рентабельность объекта за 4 года выросла на 6%
+            img(src='/static/img/content/diagram-delamapa-2.jpg' style='margin-bottom: 27px')
+            .capital-14 Вывод:  Рост показателей обусловлен эффективной работой Управляющей компании по всем направлениям #[br] в комплексе
+        .hotel__contacts.contacts
+            .contacts__item
+                .contacts__icon.contacts__icon_address
+                .contacts__title Адрес:
+                .contacts__data 353440, Россия, Краснодарский край, #[br] г. Анапа, ул. Протапова 102
+            .contacts__item
+                .contacts__icon.contacts__icon_address
+                .contacts__title E-mail:
+                .contacts__data
+                    a(href='mailto:mail@atlas.ru') mail@atlas.ru
+                    br
+                    a(href='mailto:mail@atlas.ru') mail@atlas.ru
+            .contacts__item
+                .contacts__icon.contacts__icon_phone
+                .contacts__title Телефон:
+                .contacts__data
+                    a(href='tel:+78003338960') 8 800 333 89 60
+                    br
+                    a(href='tel:+78003338960') 8 800 333 89 60
+
+
+
+
+    .navigation
+        .container
+            .navigation__prev
+                a(href='/index.html')
+                    span.arrow.arrow_prev.arrow_small
+                    span.bold На главную
+    .map.js-map-hotels
+
+block script
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCw0ZExx4pDbjpV0ByXbJuPyySTwey6v_o')
+

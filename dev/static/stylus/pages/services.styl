@@ -47,3 +47,97 @@
       font-size: inherit
       line-height: inherit
 
+.services-management
+
+  &__heading
+    margin-bottom: 35px
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 100%
+    margin-bottom: 33px
+
+  &__item
+    position: relative
+    display: flex
+    justify-content: space-between
+    width: 457px
+    border-top: 2px solid gray_light2
+    border-bottom: 2px solid gray_light2
+    margin-bottom: 20px
+    padding: 28px 40px 26px
+    align-items: center
+
+    @extend .capital-14
+
+    &:hover
+      border-top-color: #e1e1e1
+      border-bottom-color: #e1e1e1
+      background-color: gray_light2
+
+      i
+        background: blue_base
+
+        &::before, &::after
+          background-color: white
+
+    i
+      position: relative
+      display: block
+      width: 32px
+      height: 32px
+      border: 1px solid gray_light2
+      border-radius: 50%
+
+      &::before, &::after
+        content: ''
+        position: absolute
+        display: block
+        background-color: blue_base
+
+      &::before
+        top: 9px
+        left: 14px
+        width: 2px
+        height: 12px
+
+      &::after
+        top: 14px
+        left: 9px
+        width: 12px
+        height: 2px
+
+  &__colored
+    margin-bottom: 53px
+
+  .tools
+
+    &__list
+      @extend .company__reasons .reasons__list
+
+      margin-bottom: 28px
+
+    &__item
+      @extend .company__reasons .reasons__item
+
+  .diagram
+    display: flex
+    margin-bottom: 120px
+
+    &__left
+      padding-top: 46px
+
+    &__heading
+      padding-right: 10px
+      margin-bottom: 23px
+
+    &__text
+
+      p
+        font-size: 16px
+        line-height: 26px
+
+    &__image
+      margin-left: 30px

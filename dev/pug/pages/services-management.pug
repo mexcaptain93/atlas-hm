@@ -1,0 +1,89 @@
+extends ../layout/with-sidebar
+
+block variables
+    - var title = 'Atlas Management – Управление отелями'
+    - var pageHeading = 'Управление отелями'
+    - var pageClass = 'services-management'
+    - var parentSection = 'Услуги'
+
+block breadcrumbs
+    .breadcrumbs__item.breadcrumb
+        a(href='/') Главная
+    .breadcrumbs__item.breadcrumb
+        a(href='/services.html') Услуги
+    .breadcrumbs__item.breadcrumb
+        a(href='/services-management.html') Управление отелями
+
+block sidebar
+    .sidebar__list
+        .sidebar__item
+            a(href='/services.html') Услуги
+        .sidebar__item.sidebar__item_active
+            a(href='/services-management.html') Управление отелями
+        .sidebar__item.sidebar__item_inactive
+            a(href='/team.html') Предпроектное консультирование
+        .sidebar__item.sidebar__item_inactive
+            a(href='/team.html') Техническое сопровождение
+
+block content
+    .container
+        h2.services-management__heading.like-h2 Услуги управляющей компании включают в себя следующие #[br] услуги  управления:
+        .services-management__list
+            a.services-management__item(href='#')
+                span Финансы
+                i
+            a.services-management__item(href='#')
+                span Маркетинг и продажи
+                i
+            a.services-management__item(href='#')
+                span Персонал
+                i
+            a.services-management__item(href='#')
+                span Качество и репутация
+                i
+            a.services-management__item(href='#')
+                span Эксплуатация
+                i
+        h2.services-management__heading.like-h2 Все эти меры направлены на получение результатов:
+        .services-management__colored.colored
+            .colored-item.colored-item_green Стабильность в продажах
+            .colored-item.colored-item_blue Получение плановой прибыли
+            .colored-item.colored-item_orange Уровень качества отеля
+            .colored-item.colored-item_violet Максимальная эффективность объекта гостеприимства (финансовая и экономическая)
+            .colored-item.colored-item_green Стабильность персонала
+        h2.services-management__heading.like-h2 Добиться этого можно только с применением самых #[br] современных инструментов:
+        .services-management__tools.tools
+            .tools__list
+                .tools__item.tool Автоматизированная прозрачная отчетность, понятная и удобная
+                .tools__item.tool Автоматизированная система бронирования
+                .tools__item.tool Подключение к автоматизированным каналам продаж
+                .tools__item.tool Системы мотивации и лояльности к персоналу
+                .tools__item.tool Система обучения персонала
+                .tools__item.tool Современная система учета PMS-система
+                .tools__item.tool Внедрение ключевых показателей эффективности KPI для Владельца
+                .tools__item.tool Система внедрения стандартов качества
+        .services-management__diagram.diagram
+            .diagram__left
+                .diagram__heading.like-h3 По взаимодействию между Владельцем, Управляющей компанией и Генеральным менеджером (GM) мы предлагаем схему работы
+                .diagram__text
+                    p В соответствии с этой схемой соблюдены коммуникации и линии подчиненности. Генеральный менеджер является связующим звеном между персоналом отеля, Владельцем и Оператором (управляющей компанией). В данной схеме генеральным директором может быть сам Владелец отеля или любое другое доверенное ему лицо.
+            .diagram__image
+                img(src='/static/img/content/diagram.jpg')
+
+
+
+    .navigation
+        .container
+            .navigation__prev
+                a(href='#')
+                    span.arrow.arrow_prev.arrow_small
+                    span.bold Назад
+            .navigation__next
+                a(href='#')
+                    span.sub Далее:&nbsp;
+                    span.bold Управление отелями
+                    span.arrow.arrow_next.arrow_small
+
+
+
+

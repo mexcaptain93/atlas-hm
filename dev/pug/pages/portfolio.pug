@@ -1,0 +1,47 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Atlas Management – Портфолио'
+    - var pageClass = 'portfolio'
+    - var pageHeading = 'Портфолио'
+
+block breadcrumbs
+    .breadcrumbs__item.breadcrumb
+        a(href='/') Главная
+    .breadcrumbs__item.breadcrumb
+        a(href='/portfolio.html') Портфолио
+
+
+block content
+    .container
+        .portfolio__heading.like-h4 Текстовый блок
+        .portfolio__text.text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        .portfolio__list.js-portfolio-hotels-list
+            a.portfolio__item.hotel(href='/hotel-delamapa.html' data-coordinates='44.8929474;37.3108253')
+                .hotel__photo(style='background-image: url(/static/img/content/hotel-1.jpg)')
+                .hotel__name Отель De La Mapa
+                .hotel__descr Отель «Де Ла Мапа» в Анапе занимает поистине привлекательное место: он расположился в самом центре курортной и административной зоны города Анапа. Это уникальное сочетание исторического наследия и стильного, современного дизайна.
+                .hotel__link
+                    span Подробнее
+                    .arrow.arrow_next.arrow_white.arrow_small
+            a.portfolio__item.hotel(href='#' data-coordinates='44.948388;37.300269')
+                .hotel__photo(style='background-image: url(/static/img/content/hotel-2.jpg)')
+                .hotel__name Отель Джемете
+                .hotel__descr На просторной озелененной территории площадью 5 га расположился курортный отель "Джемете". Отель находится на первой береговой линии. Всего в 28 шагах, располагается собственный оборудованный пляж.
+                .hotel__link
+                    span Подробнее
+                    .arrow.arrow_next.arrow_white.arrow_small
+            a.portfolio__item.hotel(href='#' data-coordinates='44.9513477;37.303045')
+                .hotel__photo(style='background-image: url(/static/img/content/hotel-3.jpg)')
+                .hotel__name Отель Dublin Dolphin
+                .hotel__descr Отель Островок состоит из двух корпусов и готов предложить своим гостям широкий спектр услуг для комфортного семейного отдыха с детьми и размещения целой компании друзей. Мы поддерживаем соответствующий уровень и держим под постоянным контролем сервис и работу персонала.
+                .hotel__link
+                    span Подробнее
+                    .arrow.arrow_next.arrow_white.arrow_small
+
+    .map.js-map-hotels
+
+block script
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCw0ZExx4pDbjpV0ByXbJuPyySTwey6v_o')
+
