@@ -27,23 +27,33 @@ block sidebar
 
 block content
     .container
-        h2.services-management__heading.like-h2 Услуги управляющей компании включают в себя следующие #[br] услуги  управления:
+        h2.services-management__heading.like-h2 Услуги управляющей компании включают в себя следующие услуги  управления:
         .services-management__list
-            a.services-management__item(href='#')
+            a.services-management__item.js-popup-plus-open(href='#')
                 span Финансы
                 i
-            a.services-management__item(href='#')
+                .popup-text.js-popup-open-text
+                    p Test 1
+                    p Test 2
+            a.services-management__item.js-popup-plus-open(href='#')
                 span Маркетинг и продажи
                 i
-            a.services-management__item(href='#')
+            a.services-management__item.js-popup-plus-open(href='#')
                 span Персонал
                 i
-            a.services-management__item(href='#')
+            a.services-management__item.js-popup-plus-open(href='#')
                 span Качество и репутация
                 i
-            a.services-management__item(href='#')
+            a.services-management__item.js-popup-plus-open(href='#')
                 span Эксплуатация
                 i
+        .popup.popup-plus.js-popup-plus
+            .popup__overlay.js-popup-plus-overlay
+                .popup__wrap.popup-plus__wrap
+                    .popup__close.js-popup-plus-close
+                    .popup-plus__content.js-popup-plus-content
+
+
         h2.services-management__heading.like-h2 Все эти меры направлены на получение результатов:
         .services-management__colored.colored
             .colored-item.colored-item_green Стабильность в продажах
@@ -78,12 +88,6 @@ block content
                 a(href='#')
                     span.arrow.arrow_prev.arrow_small
                     span.bold Назад
-            .navigation__next
-                a(href='#')
-                    span.sub Далее:&nbsp;
-                    span.bold Управление отелями
-                    span.arrow.arrow_next.arrow_small
-
 
 
 

@@ -5,8 +5,14 @@
   background-color: blue_base
   padding: 25px 50px
 
+  @media screen and (max-width: 1440px)
+    padding: 25px 20px
+
   &__logo
     width: 370px
+
+    @media screen and (max-width: 1680px)
+      width: auto
 
   &__menu
 
@@ -37,14 +43,36 @@
     align-items: center
     justify-content flex-end
 
+    @media screen and (max-width: 1680px)
+      width: auto
+
     .phone
 
       &__text
         margin-right: 25px
 
-        font-family: 'Muller Medium'
+        font-weight: 500
         font-size: 18px
         color: gray_light2
         @extend .transition
 
         @extend .hover-opacity
+
+      &__btn
+
+        .btn
+
+          @media screen and (max-width: 1440px)
+            font-size: 0
+            width: 50px
+
+          &::before
+            @media screen and (max-width: 1440px)
+              content: ''
+              display: block
+              width: 50px
+              height: 50px
+              background-image: url('../img/general/contacts-phone.png')
+              background-repeat: no-repeat
+              background-size: initial
+              background-position: center center

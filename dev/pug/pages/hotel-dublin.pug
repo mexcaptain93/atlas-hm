@@ -1,0 +1,64 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Atlas Management – Dublin Dolphin'
+    - var pageClass = 'hotel'
+    - var pageHeading = 'Портфолио'
+
+block breadcrumbs
+    .breadcrumbs__item.breadcrumb
+        a(href='/') Главная
+    .breadcrumbs__item.breadcrumb
+        a(href='/portfolio.html') Портфолио
+
+
+block content
+    .container
+        .hotel__name.like-h2 Отель Dublin Dolphin
+        .hotel__text.hotel__text_line
+            p Отель DUBLIN DOLPHIN расположен в поселке Витязево на второй береговой линии в 600 метрах от пляжа. На территории отеля имеется кафе, бассейн и комфортные зоны барбекю. Отель новый, построен в 2016 году, очень атмосферный и достойно укомплектован, состоит из 56 номеров и 4-х двух – этажных коттеджей.
+        .hotel__photo
+            img(src='/static/img/content/hotel-dublin.jpg')
+        .hotel__data
+            .like-h3 Взят в управление нашей компанией в начале 2017 года
+            .hotel__text
+                p Взят в управление нашей компанией в начале 2017 года. Несмотря на средне-низкие статистические показатели по городу Анапа в этом году, загрузка отеля составила 72,65 % за период с 20 мая по 30 сентября. По маркетинговому медиа-плану предполагалось 30% доля продаж туроператорами, но фактически Управляющая компания самостоятельно смогла реализовать продажи по этому объекту. Рентабельность отеля составила 55%.
+                p Основной целью Управляющей компании является повышение качества оказания гостиничных услуг, увеличение притока туристов на наших объектах доказывает, что Мы умеем с профессионализмом выполнять свои функции.
+            .capital-14 Количество гостей (в чел.)
+            img(src='/static/img/content/diagram-dublin.jpg')
+
+
+        .hotel__contacts.contacts
+            .contacts__item
+                .contacts__icon.contacts__icon_address
+                .contacts__title Адрес:
+                .contacts__data 353440, Россия, Краснодарский край, #[br] г. Анапа, ул. Протапова 102
+            .contacts__item
+                .contacts__icon.contacts__icon_address
+                .contacts__title E-mail:
+                .contacts__data
+                    a(href='mailto:sales@atlas.ru') sales@atlas.ru
+                    br
+                    span Напишите нам
+            .contacts__item
+                .contacts__icon.contacts__icon_phone
+                .contacts__title Телефон:
+                .contacts__data
+                    span Бесплатный звонок
+                    br
+                    a(href='tel:+78003338960') 8 800 333 89 60
+
+
+
+
+    .navigation
+        .container
+            .navigation__prev
+                a(href='/index.html')
+                    span.arrow.arrow_prev.arrow_small
+                    span.bold На главную
+    .map.js-map(data-coordinates='44.8949655;37.3016326' data-name='Atlas Management')
+
+block script
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCw0ZExx4pDbjpV0ByXbJuPyySTwey6v_o')
+

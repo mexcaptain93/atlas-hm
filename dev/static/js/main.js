@@ -1,7 +1,8 @@
 $(document).ready(function () {
     indexSlider();
     ownersMap();
-    hotelsMap()
+    hotelsMap();
+    popups();
 });
 
 function indexSlider() {
@@ -11,7 +12,10 @@ function indexSlider() {
 
     if (indexSlider.length) {
         indexSlider.slick({
-            dots: true
+            dots: true,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000
         });
 
         indexSliderPrev.on('click', function (e) {
@@ -114,4 +118,31 @@ function markerEvents (marker, name, map) {
         }
     })());
 
+}
+
+function popups() {
+    var popupPlusOpen = $('.js-popup-plus-open'),
+        popupPlusClose = $('.js-popup-plus-close, .js-popup-plus-overlay'),
+        popupPlusContent = $('.js-popup-plus-content'),
+        popupPlus = $('.js-popup-plus');
+
+    popupPlusOpen.on('click', function (e) {
+        e.preventDefault();
+        if (popupPlus.length) {
+            popupPlus.show();
+            var text = $(this).find('.js-popup-open-text').html();
+            popupPlusContent.html(text);
+            $('body').addClass('stop-scrolling');
+
+        }
+    });
+
+    popupPlusClose.on('click', function (e) {
+        if (e.target === this) {
+            e.preventDefault();
+            popupPlus.hide();
+            popupPlusContent.html('');
+            $('body').removeClass('stop-scrolling');
+        }
+    });
 }

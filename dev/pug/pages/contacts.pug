@@ -1,0 +1,72 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Atlas Management – Контакты'
+    - var pageClass = 'contacts'
+    - var pageHeading = 'Контакты'
+
+block breadcrumbs
+    .breadcrumbs__item.breadcrumb
+        a(href='/') Главная
+    .breadcrumbs__item.breadcrumb
+        a(href='/contacts.html') Контакты
+
+block content
+
+    .contacts__map.map.js-map(data-coordinates='44.8949655;37.3016326' data-name='Atlas Management')
+
+    .container
+        .contacts__heading.like-h4 Месторасположение:
+        .contacts__text
+            p Офис находится в г. Анапа на Высоком берегу в здании Золотой бухты, расположенном по-соседству со спортивной школой (красивое стеклянное здание, построенное в современном архитектурном стиле hi-tech кубизм с красивым видом на Черное море).
+        .contacts__socials
+            a.social.social_vk.social_white(href='#')
+            a.social.social_ok.social_white(href='#')
+            a.social.social_fb.social_white(href='#')
+        .contacts__photo-data
+            .contacts__photo
+                img(src='/static/img/content/contacts.jpg')
+            .contacts__data
+                .like-h4 Контакты
+                .contacts__list
+                    .contacts__item.item.item_address
+                        .item__title Адрес офиса:
+                        .item__value 353440, г-к. Анапа, проспект Революции, д. 3, оф. №5
+
+                    .contacts__item.item.item_email
+                        .item__title E-mail:
+                        .item__value
+                            a(href='mailto:es_t@atlas-hotels.ru') es_t@atlas-hotels.ru
+                    .contacts__item.item.item_phone
+                        .item__title Телефон:
+                        .item__value 8 861 204 19 29 (доб. 140)
+        .contacts__descr-form
+            .contacts__descr
+                .contacts__heading.like-h4 Как проехать:
+                .contacts__text
+                    p От автовокзала на маршрутном автобусе №9 по ул. Крымская, ул. Ленина на пр. Революции. Остановка «Спортшкола». Далее пройти через парковочную стоянку по направлению к морю и с правой стороны на первом этаже здания будут офисы. Наш офис №5 третий по счету.
+            .contacts__form.form
+                .form__heading Свяжитесь с нами:
+                .form__hint Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                form.form__form
+                    .form__list
+                        input(type='text' placeholder='Ваше имя')
+                        input(type='text' placeholder='Телефон')
+                        input(type='text' placeholder='E-mail')
+                        textarea(placeholder='Комментарий')
+                    .contacts__privacy Нажимая кнопку вы соглашаетесь на обработку персональных данных
+                    button.btn.btn_green Написать
+
+
+
+
+    .navigation
+        .container
+            .navigation__prev
+                a(href='/index.html')
+                    span.arrow.arrow_prev.arrow_small
+                    span.bold На главную
+
+block script
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCw0ZExx4pDbjpV0ByXbJuPyySTwey6v_o')
+

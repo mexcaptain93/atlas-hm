@@ -1,0 +1,155 @@
+.contacts
+
+  .content
+    padding-top: 0
+
+  &__map
+    margin-bottom: 76px
+
+  &__heading
+    margin-bottom: 19px
+
+  &__text
+    margin-bottom: 19px
+
+    p
+      font-size: 14px
+      line-height: 26px
+
+  &__socials
+    margin-bottom: 29px
+    padding-bottom: 23px
+    border-bottom 1px solid gray2
+
+  &__photo-data
+    display: flex
+    padding-bottom: 30px
+    margin-bottom: 30px
+    border-bottom: 1px solid gray2
+
+  &__photo
+    width: 50%
+
+  &__data
+    width: 50%
+    padding-top: 45px
+    padding-left: 14px
+
+    .like-h4
+      margin-bottom: 34px
+
+    .item
+      
+      &_address
+        width: 100%
+        margin-bottom: 34px
+
+        .item__title::before
+          background-image: url('../img/general/contacts-address-green.png')
+          width: 11px
+          height: 16px
+
+      &_email
+        width: 196px
+
+        .item__title::before
+          background-image: url('../img/general/contacts-phone-green.png')
+          width: 16px
+          height: 16px
+
+      &_phone
+
+        .item__title::before
+          background-image: url('../img/general/contacts-phone-green.png')
+          width: 16px
+          height: 16px
+
+
+      &__title
+        margin-bottom: 13px
+
+        color: blue_base
+        font-size: 16px
+        font-weight: 700
+
+        &::before
+          content: ''
+          display: inline-block
+          margin-right: 20px
+          background-size: 100%
+          background-repeat: no-repeat
+
+      &__value
+        font-size: 14px
+        color: gray_dark
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+  &__form
+    flex-shrink: 0;
+    width: 455px
+    padding: 43px 67px 32px
+    background-color: blue_base
+
+  .form
+
+    &__heading
+      margin-bottom: 17px
+
+      font-size: 24px
+      color: white
+      font-weight: 700
+
+    &__hint
+      margin-bottom: 22px
+
+      font-size: 14px
+      line-height: 22px
+      color: alpha(white, 0.5)
+
+    &__form
+
+      .btn
+        width: 100%
+        height: 58px
+
+      input, textarea
+        font-family 'Montserrat', sans-serif
+        display: block
+        border: none
+        border-bottom: 1px solid gray2
+        width: 100%
+        padding: 20px 27px
+
+        font-size: 14px
+        line-height: 1
+        color: gray_base
+        background-color: white
+
+      textarea
+        height: 130px
+
+    &__list
+      margin-bottom: 22px
+      border: 1px solid gray2
+      border-radius: 5px
+
+  &__privacy
+    margin-bottom: 24px
+
+    font-size: 14px
+    line-height: 22px
+    color: alpha(white, 0.5)
+    text-align: center
+
+
+
+  &__descr-form
+    display: flex
+    align-items: flex-start
+    margin-bottom: 60px
+
+  &__descr
+    padding-top: 40px
+    padding-right: 138px

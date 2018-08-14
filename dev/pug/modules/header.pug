@@ -14,8 +14,8 @@ header.header
                 a(href='/services.html') Услуги
             .menu__item(class= pageClass === "portfolio" || pageClass == 'hotel' ? "menu__item_active":"")
                 a(href='/portfolio.html') Портфолио
-            .menu__item
-                a(href='#') Контакты
+            .menu__item(class= pageClass === "contacts" ? "menu__item_active":"")
+                a(href='/contacts.html') Контакты
     .header__phone.phone
         .phone__text
             a(href='tel:+78003338960') 8 800 333 89 60
