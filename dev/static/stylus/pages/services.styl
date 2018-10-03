@@ -5,36 +5,37 @@
 
   &__list
     display: flex
-    margin-bottom: 53px
+    flex-wrap: wrap
+    margin-bottom: 13px
 
   .service
     display: flex
     flex-direction: column
     justify-content: space-between
-    width: 293px
+    width: calc(50% - 20px)
     height: 240px
     padding: 35px 40px 40px
-    margin-right: 41px
+    margin-right: 40px
     background-color: blue_base
+    margin-bottom: 40px
 
-    @extend .capital-14
+    @extend .body .capital-14
     line-height: 26px
     letter-spacing: .5px
     color: white
 
-    &:last-child
+    &:nth-child(even)
       margin-right: 0
 
     &__arrow
-      @extend .arrow_white
+      @extend .body .arrow_white
 
     &_inactive
       background-color: gray_light2
       color: gray_light
-      margin-right: 25px
 
       .arrow
-        @extend .arrow_gray
+        @extend .body .arrow_gray
 
 
   &__text
@@ -60,31 +61,67 @@
     margin-bottom: 33px
 
   &__item
-    position: relative
-    display: flex
-    justify-content: space-between
     width: 457px
-    border-top: 2px solid gray_light2
-    border-bottom: 2px solid gray_light2
-    margin-bottom: 20px
-    padding: 28px 40px 26px
-    align-items: center
 
-    @extend .capital-14
+    .item
 
-    &:hover
-      border-top-color: #e1e1e1
-      border-bottom-color: #e1e1e1
-      background-color: gray_light2
+      &__opener
+        position: relative
+        display: flex
+        justify-content: space-between
+        border-top: 2px solid gray_light2
+        border-bottom: 2px solid gray_light2
+        margin-bottom: 20px
+        padding: 28px 40px 26px
+        align-items: center
 
-      i
-        background: blue_base
+        @extend .body .capital-14
 
-        &::before, &::after
+        &:hover
+          border-top-color: #e1e1e1
+          border-bottom-color: #e1e1e1
+          background-color: gray_light2
+
+          i
+            background-color: blue_base
+            background-image: url('../img/svg/arrow-down-white.svg')
+
+            &::before, &::after
+              background-color: white
+
+        &_opened
+          background-color: gray_light2
+
+          i
+            background-image: url('../img/general/x-white.png')
+            
+          &:hover
+            
+            i
+              background-image: url('../img/general/x-white.png')
+
+      &__popup
+        display: none
+        border: 1px solid gray_light2
+        position: relative
+        top: -9px
+        padding: 36px
+        margin-bottom: 20px
+
+        &::after
+          content: ''
+          width: 16px
+          height: 16px
+          position: absolute
+          top: -9px
+          left: 50%
+          display: block
+          border-top: 1px solid gray_light2
+          border-right: 1px solid gray_light2
+          transform: rotate(-45deg)
           background-color: white
 
-    .popup-text
-      display: none
+
 
     i
       position: relative
@@ -93,27 +130,30 @@
       height: 32px
       border: 1px solid gray_light2
       border-radius: 50%
+      background-image: url('../img/svg/arrow-down-blue.svg')
+      background-position: center center
+      background-repeat no-repeat
 
-      &::before, &::after
-        content: ''
-        position: absolute
-        display: block
-        background-color: blue_base
 
-      &::before
-        top: 9px
-        left: 14px
-        width: 2px
-        height: 12px
-
-      &::after
-        top: 14px
-        left: 9px
-        width: 12px
-        height: 2px
-
-  &__colored
+  .results
     margin-bottom: 53px
+    display: flex
+    flex-wrap: wrap
+
+    &__item
+      width: 50%
+      margin-bottom: 35px
+      display: flex
+      justify-content: flex-start
+      align-items: center
+
+      font-size: 16px
+      line-height: 30px
+      color: gray_dark
+      @extend .body .medium
+
+      img
+        margin-right: 20px
 
   .tools
 

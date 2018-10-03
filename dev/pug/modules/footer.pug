@@ -21,3 +21,19 @@ footer.footer
             .footer__privacy-link
                 a(href='#') Политика конфиденциальности
 
+.popup.popup_callback.js-callback
+    .popup__overlay
+        .popup__wrap
+            .contacts-form
+                .contacts-form__heading Свяжитесь с нами:
+                .contacts-form__hint Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                form.contacts-form__form
+                    .contacts-form__list.js-callback-form
+                        input(type='text' placeholder='Ваше имя').js-callback-name
+                        input(type='text' placeholder='Телефон').js-callback-phone
+                        input(type='text' placeholder='E-mail').js-callback-email
+                        textarea(placeholder='Комментарий').js-callback-text
+                    .contacts-form__privacy Нажимая кнопку вы соглашаетесь на обработку персональных данных
+                    button.btn.btn_green.js-callback-send Написать
+            .popup__close.js-callback-close
+

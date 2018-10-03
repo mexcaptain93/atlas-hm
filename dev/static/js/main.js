@@ -3,6 +3,7 @@ $(document).ready(function () {
     ownersMap();
     hotelsMap();
     popups();
+    callback();
 });
 
 function indexSlider() {
@@ -32,26 +33,26 @@ function indexSlider() {
 
 function ownersMap() {
     var mapElement = $('.js-map');
-        if (mapElement.length) {
-            coordinates = ['44.8949655', '37.3016326'];
+    if (mapElement.length) {
+        coordinates = ['44.8949655', '37.3016326'];
 
-            if (mapElement[0].hasAttribute('data-coordinates')) {
-                coordinates = mapElement.attr('data-coordinates').split(';');
-            }
-
-            map = new google.maps.Map(mapElement[0], {
-                center: {lat: parseFloat(coordinates[0]), lng: parseFloat(coordinates[1])},
-                zoom: 18,
-                scrollwheel: false,
-                zoomControl: true,
-                disableDefaultUI: true,
-            });
-
-
-            if (coordinates) {
-                addMarkerToMap(parseFloat(coordinates[0]), parseFloat(coordinates[1]), mapElement.attr('data-name'), map);
-            }
+        if (mapElement[0].hasAttribute('data-coordinates')) {
+            coordinates = mapElement.attr('data-coordinates').split(';');
         }
+
+        map = new google.maps.Map(mapElement[0], {
+            center: {lat: parseFloat(coordinates[0]), lng: parseFloat(coordinates[1])},
+            zoom: 18,
+            scrollwheel: false,
+            zoomControl: true,
+            disableDefaultUI: true,
+        });
+
+
+        if (coordinates) {
+            addMarkerToMap(parseFloat(coordinates[0]), parseFloat(coordinates[1]), mapElement.attr('data-name'), map);
+        }
+    }
 
 }
 
@@ -60,7 +61,13 @@ function hotelsMap() {
     var mapHotels = $('.js-map-hotels');
 
     if (mapHotels.length) {
-        coordinates = ['44.9149655', '37.3016326'];
+
+        if (mapHotels[0].hasAttribute('data-coordinates')) {
+            coordinates = mapHotels.data('coordinates').split(';');
+        } else {
+            coordinates = ['44.9149655', '37.3016326'];
+        }
+
 
         var map = new google.maps.Map(mapHotels[0], {
             center: {lat: parseFloat(coordinates[0]), lng: parseFloat(coordinates[1])},
@@ -69,6 +76,10 @@ function hotelsMap() {
             zoomControl: true,
             disableDefaultUI: true,
         });
+
+        if (mapHotels[0].hasAttribute('data-coordinates')) {
+            addMarkerToMap(coordinates[0], coordinates[1], mapHotels.data('name'), map);
+        }
 
         $('.js-portfolio-hotels-list').find('.hotel').each(function(){
             var coordinates = $(this).attr('data-coordinates');
@@ -87,7 +98,7 @@ function addMarkerToMap (x, y, name, map) {
 
     var myLatlng = new google.maps.LatLng(x,y);
 
-    markerImage = '/static/img/general/map-marker.png';
+    markerImage = '/bitrix/templates/atlas_hm/static/img/general/map-marker.png';
 
     var marker = new google.maps.Marker({
         position: myLatlng,
@@ -121,28 +132,87 @@ function markerEvents (marker, name, map) {
 }
 
 function popups() {
-    var popupPlusOpen = $('.js-popup-plus-open'),
-        popupPlusClose = $('.js-popup-plus-close, .js-popup-plus-overlay'),
-        popupPlusContent = $('.js-popup-plus-content'),
-        popupPlus = $('.js-popup-plus');
+    var popupPlusOpen = $('.js-popup-plus-open');
 
     popupPlusOpen.on('click', function (e) {
         e.preventDefault();
+        popupPlus = $(this).siblings('.js-popup-plus-text');
         if (popupPlus.length) {
-            popupPlus.show();
-            var text = $(this).find('.js-popup-open-text').html();
-            popupPlusContent.html(text);
-            $('body').addClass('stop-scrolling');
-
+            popupPlus.slideToggle();
+            $(this).toggleClass('item__opener_opened');
         }
     });
+}
 
-    popupPlusClose.on('click', function (e) {
-        if (e.target === this) {
+function callback() {
+    var callback = $('.js-callback'),
+        callbackBtn = $('.js-callback-btn'),
+        callbackClose = $('.js-callback-close, .js-callback .popup__overlay'),
+        callbackForm = $('.js-callback-form'),
+        callbackSend = $('.js-callback-send');
+
+    callbackSend.on('click', function (e) {
+        e.preventDefault();
+
+        $(this).html('Подождите');
+
+
+
+        var callbackForm = $(this).siblings('.js-callback-form');
+
+        callbackForm.find('.error').removeClass('error');
+
+        var callbackName = callbackForm.find('.js-callback-name'),
+            callbackEmail = callbackForm.find('.js-callback-email'),
+            callbackPhone = callbackForm.find('.js-callback-phone'),
+            callbackText = callbackForm.find('.js-callback-text'),
+            data = {},
+            error = '';
+
+        if (!(data.name = callbackName.val())) {
+            error += 'Введите имя. ';
+            callbackName.addClass('error');
+        }
+        if (!(data.phone = callbackPhone.val())) {
+            error += 'Введите телефон. ';
+            callbackPhone.addClass('error');
+        }
+        if (!(data.email = callbackEmail.val())) {
+            error += 'Введите E-mail. ';
+            callbackEmail.addClass('error');
+        }
+        if (!(data.text = callbackText.val())) {
+            error += 'Введите комментарий. ';
+            callbackText.addClass('error');
+        }
+
+        if (error == '') {
+            $.ajax(
+
+            );
+        }
+
+
+    });
+
+
+    if (callbackBtn.length) {
+        callbackBtn.on('click', function (e) {
             e.preventDefault();
-            popupPlus.hide();
-            popupPlusContent.html('');
-            $('body').removeClass('stop-scrolling');
-        }
-    });
+            $('body').addClass('stop-scrolling');
+            callback.show();
+        });
+    }
+
+    if (callbackClose.length) {
+        callbackClose.on('click', function (e) {
+            if (e.target === this) {
+                e.preventDefault();
+                $('body').removeClass('stop-scrolling');
+                callback.hide();
+            }
+        });
+    }
+
+
 }

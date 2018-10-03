@@ -29,38 +29,71 @@ block content
     .container
         h2.services-management__heading.like-h2 Услуги управляющей компании включают в себя следующие услуги  управления:
         .services-management__list
-            a.services-management__item.js-popup-plus-open(href='#')
-                span Финансы
-                i
-                .popup-text.js-popup-open-text
-                    p Test 1
-                    p Test 2
-            a.services-management__item.js-popup-plus-open(href='#')
-                span Маркетинг и продажи
-                i
-            a.services-management__item.js-popup-plus-open(href='#')
-                span Персонал
-                i
-            a.services-management__item.js-popup-plus-open(href='#')
-                span Качество и репутация
-                i
-            a.services-management__item.js-popup-plus-open(href='#')
-                span Эксплуатация
-                i
-        .popup.popup-plus.js-popup-plus
-            .popup__overlay.js-popup-plus-overlay
-                .popup__wrap.popup-plus__wrap
-                    .popup__close.js-popup-plus-close
-                    .popup-plus__content.js-popup-plus-content
-
+            .services-management__item.item
+                a.item__opener.js-popup-plus-open(href='#')
+                    span Финансы
+                    i
+                .item__popup.js-popup-plus-text
+                    ul.ul
+                        li Бюджетирование
+                        li Финансовое планирование
+                        li Бухгалтерский учёт
+                        li Управленческий учёт
+            .services-management__item.item
+                a.item__opener.js-popup-plus-open(href='#')
+                    span Маркетинг и продажи
+                    i
+                .item__popup.js-popup-plus-text
+                    ul.ul
+                        li Маркетинговая стратегия и планирование
+                        li Подключение к эффективным каналам продаж
+                        li Включение комплекса в корпоративную рекламную компанию
+                        li Подключение к централизованной системе бронирования
+            .services-management__item.item
+                a.item__opener.js-popup-plus-open(href='#')
+                    span Персонал
+                    i
+                .item__popup.js-popup-plus-text
+                    ul.ul
+                        li Подбор персонала
+                        li Найм персонала
+                        li Обучение и адаптация персонала
+            .services-management__item.item
+                a.item__opener.js-popup-plus-open(href='#')
+                    span Качество и репутация
+                    i
+                .item__popup.js-popup-plus-text
+                    ul.ul
+                        li Внедрение стандартов
+                        li Рейтинг и репутация отеля
+                        li Контроль качества
+            .services-management__item.item
+                a.item__opener.js-popup-plus-open(href='#')
+                    span Маркетинг и продажи
+                    i
+                .item__popup.js-popup-plus-text
+                    ul.ul
+                        li Техническое обслуживание объекта
+                        li IT - сопровождение
+                        li Генеральный менеджер
 
         h2.services-management__heading.like-h2 Все эти меры направлены на получение результатов:
-        .services-management__colored.colored
-            .colored-item.colored-item_green Стабильность в продажах
-            .colored-item.colored-item_blue Получение плановой прибыли
-            .colored-item.colored-item_orange Уровень качества отеля
-            .colored-item.colored-item_violet Максимальная эффективность объекта гостеприимства (финансовая и экономическая)
-            .colored-item.colored-item_green Стабильность персонала
+        .services-management__results.results
+            .results__item
+                img(src='/static/img/svg/management-icon-1.svg')
+                span Стабильность в продажах
+            .results__item
+                img(src='/static/img/svg/management-icon-2.svg')
+                span Получение плановой прибыли
+            .results__item
+                img(src='/static/img/svg/management-icon-3.svg')
+                span Уровень качества отеля
+            .results__item
+                img(src='/static/img/svg/management-icon-4.svg')
+                span Максимальная эффективность объекта гостеприимства (финансовая и экономическая)
+            .results__item
+                img(src='/static/img/svg/management-icon-5.svg')
+                span Стабильность персонала
         h2.services-management__heading.like-h2 Добиться этого можно только с применением самых #[br] современных инструментов:
         .services-management__tools.tools
             .tools__list

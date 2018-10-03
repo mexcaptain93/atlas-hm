@@ -6,288 +6,377 @@
   &:hover
     opacity: .8
 
-.logo
-  display: inline-block
-  background-image: url('../img/general/logo.png')
-  width: 160px
-  height: 44px
+.body
+  .logo
+    display: inline-block
+    background-image: url('../img/general/logo.png')
+    width: 160px
+    height: 44px
 
-.like-h1
-  font-weight: 700
-  font-size: 36px
-  line-height: 46px
-  color: gray_dark
+  .like-h1
+    font-weight: 700
+    font-size: 36px
+    line-height: 46px
+    color: gray_dark
 
-.like-h2
-  font-weight: 700
-  font-size: 32px
-  line-height: 42px
-  color: gray_dark
+  .like-h2
+    font-weight: 700
+    font-size: 32px
+    line-height: 42px
+    color: gray_dark
 
-.like-h3
-  font-weight: 700
-  font-size: 28px
-  line-height: 38px
-  color: gray_dark
+  .like-h3
+    font-weight: 700
+    font-size: 28px
+    line-height: 38px
+    color: gray_dark
 
-.like-h4
-  font-weight: 700
-  font-size: 24px
-  line-height: 34px
-  color: gray_dark
+  .like-h4
+    font-weight: 700
+    font-size: 24px
+    line-height: 34px
+    color: gray_dark
 
-.capital-18
-  font-weight: 700
-  font-size: 18px
-  line-height: 28px
-  color: gray_dark
-  text-transform: uppercase
-
-.bold
-  font-weight: 700
-  font-size: 16px
-  line-height: 26px
-  color: gray_dark
-
-.medium
-  font-weight: 500
-  font-size: 14px
-  line-height: 24px
-  color: gray_dark
-
-.capital-14
-  @extend .capital-18
-
-  font-size: 14px
-  line-height: 24px
-
-p
-  font-size: 18px
-  line-height: 28px
-  color: gray_base
-  letter-spacing: 0
-
-.sub
-  font-size: 16px
-  line-height: 30px
-
-.breadcrumb
-  font-size: 14px
-  line-height: 24px
-  color: gray_light
-
-.btn
-  display: inline-flex
-  justify-content: center
-  align-items: center
-  width: 195px
-  height: 50px
-  background-color: blue_light
-  border-radius: 25px
-  cursor: pointer
-  @extend .transition
-
-  color: white
-  font-weight: 700
-  font-size: 14px
-
-  @extend .hover-opacity
-
-  &_green
-    background-color: green_base
-
-.social
-  display: inline-block
-  width: 50px
-  height: 50px
-  margin-right: 10px
-
-  @extend .transition
-  @extend .hover-opacity
-
-
-  &:last-child
-    margin-right: 0
-
-  &_vk
-    background-image: url('../img/general/vk.png')
-
-  &_ok
-    background-image: url('../img/general/ok.png')
-
-  &_fb
-    background-image: url('../img/general/fb.png')
-
-.arrow
-  display: block
-  width: 54px
-  height: 54px
-  background-color: white
-  background-repeat no-repeat
-  background-position center center
-  border-radius: 30px
-  cursor: pointer
-
-  &_prev
-    background-image: url('../img/svg/arrow-prev.svg')
-
-  &_next
-    background-image: url('../img/svg/arrow-next.svg')
-
-  &_small
-    width: 40px
-    height: 40px
-    background-color: transparent
-    border: 1px solid gray2
-    background-position 16px center
-
-    &.arrow_prev
-      background-position 12px center
-
-
-  &_white
-
-    &.arrow
-
-      &_prev
-        background-image: url('../img/svg/arrow-prev-white.svg')
-
-      &_next
-        background-image: url('../img/svg/arrow-next-white.svg')
-
-  &_gray
-
-    &.arrow
-
-      &_prev
-        background-image: url('../img/svg/arrow-prev-gray.svg')
-
-      &_next
-        background-image: url('../img/svg/arrow-next-gray.svg')
-
-
-.heading
-  margin-bottom: 44px
-
-.text
-  margin-bottom: 60px
-
-.pointed
-  @extend .capital-14
-
-  color: blue_base
-
-  &_bordered
-    border: 10px solid gray_light2
-    padding: 47px 88px
-
+  .capital-18
+    font-weight: 700
     font-size: 18px
     line-height: 28px
-    letter-spacing: 0.7px
-
-.navigation
-  .container
-    display: flex
-    justify-content: space-between
-    padding: 60px 0
-    border-top 1px solid gray2
-
-  .sub
-    color: gray_base
+    color: gray_dark
+    text-transform: uppercase
 
   .bold
-    color: blue_base
+    font-weight: 700
+    font-size: 16px
+    line-height: 26px
+    color: gray_dark
 
-  &__prev, &__next
+  .medium
+    font-weight: 500
+    font-size: 14px
+    line-height: 24px
+    color: gray_dark
 
-    a
-      display: flex
-      align-items: center
+  .capital-14
+    @extend .body .capital-18
 
-      @extend .transition
-      @extend .hover-opacity
+    font-size: 14px
+    line-height: 24px
 
-  &__prev
+  p
+    font-size: 18px
+    line-height: 28px
+    color: gray_base
+    letter-spacing: 0
 
-    .arrow
-      margin-right: 30px
+  .sub
+    font-size: 16px
+    line-height: 30px
 
-  &__next
+  .breadcrumb
+    font-size: 14px
+    line-height: 24px
+    color: gray_light
 
-    .arrow
-      margin-left: 30px
+  .btn
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    width: 195px
+    height: 50px
+    background-color: blue_light
+    border-radius: 25px
+    cursor: pointer
+    @extend .transition
 
-  &__next a
-    display: flex
+    color: white
+    font-weight: 700
+    font-size: 14px
 
-.colored-heading
-  @extend .capital-18
-  line-height: 20px
+    &:hover
+      background-color: darken(blue_light, 10%)
 
-  background-color: gray_light2
-  padding: 16px 0 14px 30px
-  margin-bottom: 30px
-
-  &_green
-    border-left: 5px solid green_base
-
-  &_blue
-    border-left: 5px solid blue_base
-
-  &_orange
-    border-left: 5px solid orange_base
-
-  &_violet
-    border-left: 5px solid blue_dark
-
-.colored-item
-  display: flex
-  align-items: center
-  margin-bottom: 20px
-
-  font-weight: 500
-  font-size: 16px
-  color: gray_dark
-
-  &::before
-    content: ''
-    margin-right: 30px
-    width: 26px
-    height: 26px
-    background-image: url('../img/svg/arrow-white.svg')
-    background-repeat no-repeat
-    background-position center center
-    border-radius 50%
-
-  &_green
-
-    &::before
+    &_green
       background-color: green_base
 
-  &_blue
+      &:hover
+        background-color: darken(green_base, 10%)
+
+  .social
+    display: inline-block
+    width: 50px
+    height: 50px
+    margin-right: 10px
+
+    @extend .transition
+    @extend .hover-opacity
+
+
+    &:last-child
+      margin-right: 0
+
+    &_vk
+      background-image: url('../img/general/vk.png')
+
+    &_ok
+      background-image: url('../img/general/ok.png')
+
+    &_fb
+      background-image: url('../img/general/fb.png')
+
+  .arrow
+    display: block
+    width: 54px
+    height: 54px
+    background-color: white
+    background-repeat no-repeat
+    background-position center center
+    border-radius: 30px
+    cursor: pointer
+
+    &_prev
+      background-image: url('../img/svg/arrow-prev.svg')
+
+    &_next
+      background-image: url('../img/svg/arrow-next.svg')
+
+    &_small
+      width: 40px
+      height: 40px
+      background-color: transparent
+      border: 1px solid gray2
+      background-position 16px center
+
+      &.arrow_prev
+        background-position 12px center
+
+
+    &_white
+
+      &.arrow
+
+        &_prev
+          background-image: url('../img/svg/arrow-prev-white.svg')
+
+        &_next
+          background-image: url('../img/svg/arrow-next-white.svg')
+
+    &_gray
+
+      &.arrow
+
+        &_prev
+          background-image: url('../img/svg/arrow-prev-gray.svg')
+
+        &_next
+          background-image: url('../img/svg/arrow-next-gray.svg')
+
+
+  .heading
+    margin-bottom: 44px
+
+  .text
+    margin-bottom: 60px
+
+  .pointed
+    @extend .body .capital-14
+
+    color: blue_base
+
+    &_bordered
+      border: 10px solid gray_light2
+      padding: 47px 88px
+
+      font-size: 18px
+      line-height: 28px
+      letter-spacing: 0.7px
+
+  .navigation
+    .container
+      display: flex
+      justify-content: space-between
+      padding: 60px 0
+      border-top 1px solid gray2
+
+    .sub
+      color: gray_base
+
+    .bold
+      color: blue_base
+
+    &__prev, &__next
+
+      a
+        display: flex
+        align-items: center
+
+        @extend .transition
+        @extend .hover-opacity
+
+    &__prev
+
+      .arrow
+        margin-right: 30px
+
+    &__next
+
+      .arrow
+        margin-left: 30px
+
+    &__next a
+      display: flex
+
+  .colored-heading
+    @extend .body .capital-18
+    line-height: 20px
+
+    background-color: gray_light2
+    padding: 16px 0 14px 30px
+    margin-bottom: 30px
+
+    &_green
+      border-left: 5px solid green_base
+
+    &_blue
+      border-left: 5px solid blue_base
+
+    &_orange
+      border-left: 5px solid orange_base
+
+    &_violet
+      border-left: 5px solid blue_dark
+
+  .colored-item
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+
+    font-weight: 500
+    font-size: 16px
+    color: gray_dark
 
     &::before
-      background-color: blue_base
+      content: ''
+      margin-right: 30px
+      width: 26px
+      height: 26px
+      background-image: url('../img/svg/arrow-white.svg')
+      background-repeat no-repeat
+      background-position center center
+      border-radius 50%
 
-  &_orange
+    &_green
 
-    &::before
-      background-color: orange_base
+      &::before
+        background-color: green_base
 
-  &_violet
+    &_blue
 
-    &::before
-      background-color: blue_dark
+      &::before
+        background-color: blue_base
 
-.table
-  display: table
+    &_orange
 
-  &__row
-    display: table-row
+      &::before
+        background-color: orange_base
 
-  &__td
-    display: table-cell
-    width: 50%
+    &_violet
 
-.map
-  height: 450px
+      &::before
+        background-color: blue_dark
+
+  .table
+    display: table
+
+    &__row
+      display: table-row
+
+    &__td
+      display: table-cell
+      width: 50%
+
+  .map
+    height: 450px
+
+  .ul
+    padding-left: 20px
+
+    li
+      @extend .body .bold
+
+      list-style-type: none
+      margin-bottom: 10px
+
+      &::before
+        content: ''
+        width: 6px
+        height: 6px
+        border-radius: 6px
+        display: inline-block
+        position: relative
+        top: -3px
+        margin-right: 9px
+        background-color: blue_base
+
+
+.contacts-form
+  width: 455px
+  padding: 43px 67px 32px
+  background-color: blue_base
+
+  &__heading
+    margin-bottom: 17px
+
+    font-size: 24px
+    color: white
+    font-weight: 700
+
+  &__hint
+    margin-bottom: 22px
+
+    font-size: 14px
+    line-height: 22px
+    color: alpha(white, 0.5)
+
+  &__form
+
+    .btn
+      width: 100%
+      height: 58px
+      border-radius: 29px
+
+  input, textarea
+    font-family 'Montserrat', sans-serif
+    display: block
+    border: none
+    border-bottom: 1px solid gray2
+    width: 100%
+    padding: 20px 27px
+
+    font-size: 14px
+    line-height: 1
+    color: gray_base
+    background-color: white
+
+    &.error
+      &::placeholder
+        color: red
+
+  textarea
+    height: 130px
+    border-bottom: none
+
+  &__list
+    margin-bottom: 22px
+    border: 1px solid gray2
+    border-radius: 5px
+
+
+
+  &__privacy
+    margin-bottom: 24px
+
+    font-size: 14px
+    line-height: 22px
+    color: alpha(white, 0.5)
+    text-align: center
+

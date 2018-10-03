@@ -13,9 +13,12 @@
   &__list
     display: flex
     flex-wrap: wrap
+    align-items: stretch
     margin-bottom: 88px
 
   &__item
+    display: flex
+    flex-direction: column
     width: 360px
     margin-right: 30px
     margin-bottom: 30px
@@ -35,11 +38,10 @@
       &__name
         margin-bottom: 18px
 
-        @extend .like-h4
+        @extend .body .like-h4
 
       &__descr
-        height: 80px
-        overflow: hidden
+        flex-grow: 1
         margin-bottom: 19px
 
         font-size: 14px

@@ -45,17 +45,17 @@ block content
                 .contacts__heading.like-h4 Как проехать:
                 .contacts__text
                     p От автовокзала на маршрутном автобусе №9 по ул. Крымская, ул. Ленина на пр. Революции. Остановка «Спортшкола». Далее пройти через парковочную стоянку по направлению к морю и с правой стороны на первом этаже здания будут офисы. Наш офис №5 третий по счету.
-            .contacts__form.form
-                .form__heading Свяжитесь с нами:
-                .form__hint Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                form.form__form
-                    .form__list
-                        input(type='text' placeholder='Ваше имя')
-                        input(type='text' placeholder='Телефон')
-                        input(type='text' placeholder='E-mail')
-                        textarea(placeholder='Комментарий')
-                    .contacts__privacy Нажимая кнопку вы соглашаетесь на обработку персональных данных
-                    button.btn.btn_green Написать
+            .contacts__form.contacts-form
+                .contacts-form__heading Свяжитесь с нами:
+                .contacts-form__hint Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                form.contacts-form__form
+                    .contacts-form__list.js-callback-form
+                        input(type='text' placeholder='Ваше имя').js-callback-name
+                        input(type='text' placeholder='Телефон').js-callback-phone
+                        input(type='text' placeholder='E-mail').js-callback-email
+                        textarea(placeholder='Комментарий').js-callback-text
+                    .contacts-form__privacy Нажимая кнопку вы соглашаетесь на обработку персональных данных
+                    button.btn.btn_green.js-callback-send Написать
 
 
 
