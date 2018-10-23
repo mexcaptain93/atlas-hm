@@ -8,13 +8,23 @@
   @media screen and (max-width: 1440px)
     padding: 25px 20px
 
+  @media screen and (max-width: 750px)
+    padding: 25px 15px 13px
+
   &__logo
     width: 370px
 
     @media screen and (max-width: 1680px)
       width: auto
 
+    @media screen and (max-width: 1200px)
+      flex-grow: 1
+
+    @media screen and (max-width: 750px)
+      text-align: center
+
   &__menu
+
 
     .menu
 
@@ -37,6 +47,34 @@
         &_active
           color: gray_light2
 
+    @media screen and (max-width: 1200px)
+      display: none
+
+      &_opened
+        display: block
+        position: absolute
+        top: 100px
+        left: 0
+        right: 0
+        z-index: 1
+        height: calc(100% - 100px)
+        background: rgba(0, 0, 0, .7)
+        padding-top: 30px
+
+        .menu
+
+          &__list
+            flex-direction: column
+
+          &__item
+            margin-right: 0
+            margin-bottom: 20px
+
+            text-align: center
+
+    @media screen and (max-width: 750px)
+      top: 93px
+
   &__phone
     display: flex
     width: 370px
@@ -58,16 +96,22 @@
 
         @extend .hover-opacity
 
+        @media screen and (max-width: 750px)
+          display: none
+
       &__btn
 
         .btn
 
-          @media screen and (max-width: 1440px)
+          @media screen and (max-width: 750px)
+            background-color: transparent
+
+          @media screen and (max-width: 1440px) and (min-width: 1201px), (max-width: 750px)
             font-size: 0
             width: 50px
 
           &::before
-            @media screen and (max-width: 1440px)
+            @media screen and (max-width: 1440px) and (min-width: 1201px), (max-width: 750px)
               content: ''
               display: block
               width: 50px
@@ -76,3 +120,54 @@
               background-repeat: no-repeat
               background-size: initial
               background-position: center center
+
+  &__burger
+    display: none
+    cursor: pointer
+    align-items: center
+    justify-content: center
+    flex-grow: 0
+    flex-shrink: 0
+    background-color: blue_light
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    margin-right: 20px
+
+    @media screen and (max-width: 1200px)
+      display: flex
+
+    @media screen and (max-width: 750px)
+      background-color: transparent
+      margin-right: 0
+
+    a
+      display: block
+      position: relative
+      width: 20px
+      height: 2px
+      background-color: gray_light2
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: -6px
+        left: 0
+        right: 0
+        width: 20px
+        height: 2px
+        background-color: gray_light2
+
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 6px
+        left: 0
+        right: 0
+        width: 20px
+        height: 2px
+        background-color: gray_light2
+
+

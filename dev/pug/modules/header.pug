@@ -1,8 +1,10 @@
 header.header
 
+    .header__burger.js-main-menu-burger
+        a(href='#')
     .header__logo
         a.logo(href='/')
-    .header__menu.menu
+    .header__menu.menu.js-main-menu
         .menu__list
             .menu__item(class= pageClass === "index" ? "menu__item_active":"")
                 a(href='/') Главная

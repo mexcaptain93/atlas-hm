@@ -4,6 +4,7 @@ $(document).ready(function () {
     hotelsMap();
     popups();
     callback();
+    mainMenu();
 });
 
 function indexSlider() {
@@ -154,9 +155,7 @@ function callback() {
     callbackSend.on('click', function (e) {
         e.preventDefault();
 
-        $(this).html('Подождите');
-
-
+        var send = $(this);
 
         var callbackForm = $(this).siblings('.js-callback-form');
 
@@ -166,6 +165,8 @@ function callback() {
             callbackEmail = callbackForm.find('.js-callback-email'),
             callbackPhone = callbackForm.find('.js-callback-phone'),
             callbackText = callbackForm.find('.js-callback-text'),
+            callbackPrivacy = callbackForm.siblings('.js-callback-privacy'),
+            callbackMsg = callbackForm.parent().siblings('.js-callback-msg'),
             data = {},
             error = '';
 
@@ -186,15 +187,53 @@ function callback() {
             callbackText.addClass('error');
         }
 
-        if (error == '') {
-            $.ajax(
+        data.mailto = callbackForm.data('mailto');
 
-            );
+        if (error == '') {
+            $.ajax({
+                url: '/bitrix/templates/atlas_hm/ajax/order.php',
+                type: 'POST',
+                data: data,
+                success: function(res) {
+                    if (res == 'true') {
+                        callbackForm.find('input, textarea').val('');
+                        if (callbackForm.parents('.popup').length) {
+                            callbackForm.hide();
+                            send.hide();
+                            send.siblings('.btn').show();
+                            callbackPrivacy.hide();
+                        }
+                        callbackMsg.html('Спасибо! Ваша заявка отправлена!');
+                        setTimeout(function() {
+                            callback.hide();
+                            $('body').removeClass('stop-scrolling');
+                            callbackForm.show();
+                            if (callbackForm.parents('.popup').length) {
+                                callbackForm.show();
+                                send.show();
+                                send.siblings('.btn').hide();
+                                callbackPrivacy.show();
+                                callbackMsg.html('');
+                            }
+
+                        }, 3000);
+                    }
+                }
+            });
         }
 
 
     });
 
+
+    $('.js-callback-close-btn').on('click', function(e) {
+        e.preventDefault();
+        callback.hide();
+        $(this).hide();
+        $(this).siblings('.btn').show();
+        callbackForm.show();
+        callbackMsg.html('');
+    })
 
     if (callbackBtn.length) {
         callbackBtn.on('click', function (e) {
@@ -214,5 +253,20 @@ function callback() {
         });
     }
 
+
+}
+
+function mainMenu() {
+    var burger = $('.js-main-menu-burger'),
+        menu = $('.js-main-menu');
+
+    burger.on('click', function (e) {
+        e.preventDefault();
+
+        if (menu.length) {
+            menu.toggleClass('header__menu_opened');
+            $('body').toggleClass('stop-scrolling');
+        }
+    })
 
 }

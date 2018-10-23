@@ -2,31 +2,76 @@
   padding: 60px 0
   background-color: blue_dark2
 
+  @media screen and (max-width: 1200px)
+    padding: 74px 0px
+
+  @media screen and (max-width: 750px)
+    padding: 64px 0px 0
+
   &__top
     border-bottom: 1px solid #1e2e56
     padding-bottom: 61px
 
+    @media screen and (max-width: 1200px)
+      padding-left: 40px
+      padding-right: 40px
+
+    @media screen and (max-width: 750px)
+      padding-left: 20px
+      padding-right: 20px
+      padding-bottom: 40px
+
     .container
       display: flex
       justify-content: space-between
+
+      @media screen and (max-width: 750px)
+        flex-direction: column
 
   &__bottom
     padding-top: 60px
 
+    @media screen and (max-width: 1200px)
+      padding-left: 40px
+      padding-right: 40px
+
+    @media screen and (max-width: 750px)
+      padding: 0
+
     .container
       display: flex
       justify-content: space-between
 
+      @media screen and (max-width: 750px)
+        flex-direction: column-reverse
+
   &__logo
     margin-bottom: 35px
+
+    @media screen and (max-width: 750px)
+      margin-bottom: 24px
+
+    .logo
+
+      @media screen and (max-width: 750px)
+        width: 160px
 
   &__address
     font-size: 14px
     color: alpha(gray_light2, .3)
 
+    @media screen and (max-width: 750px)
+      margin-bottom: 24px
+
+      text-align: center
+
   &__copy
     font-size: 14px
     color: alpha(gray_light2, .3)
+
+    @media screen and (max-width: 750px)
+      padding: 40px 0
+      text-align: center
 
     .copy
 
@@ -43,6 +88,11 @@
     color: gray_light2
     text-align: right
 
+    @media screen and (max-width: 750px)
+      margin-bottom: 24px
+
+      text-align: center
+
   &__privacy-link
     @extend .transition
     @extend .hover-opacity
@@ -50,4 +100,18 @@
     font-weight: 700
     font-size: 14px
     color: gray_light2
+
+    @media screen and (max-width: 750px)
+      padding: 40px 0
+      border-bottom: 1px solid #1e2e56
+
+      text-align: center
+
+  &__social
+
+    @media screen and (max-width: 750px)
+      height: 50px
+
+      text-align: center
+
 
