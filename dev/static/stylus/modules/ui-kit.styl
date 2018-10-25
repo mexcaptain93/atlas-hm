@@ -16,7 +16,7 @@
     background-size: 100%
     background-repeat: no-repeat
 
-    @media screen and (max-width: 750px)
+    @media screen and (max-width: 769px)
       width: 140px
       margin: 0 auto
 
@@ -26,11 +26,24 @@
     line-height: 46px
     color: gray_dark
 
+    @media screen and (max-width: 769px)
+      font-size: 28px
+      line-height: 46px
+
   .like-h2
     font-weight: 700
     font-size: 32px
     line-height: 42px
     color: gray_dark
+
+    @media screen and (max-width: 769px)
+      font-size: 28px
+      line-height: 40px
+
+    br
+
+      @media screen and (max-width: 1200px)
+        display: none
 
   .like-h3
     font-weight: 700
@@ -197,15 +210,41 @@
       line-height: 28px
       letter-spacing: 0.7px
 
+
+      @media screen and (max-width: 769px)
+        padding: 30px 14px
+        font-size: 16px
+        line-height: 26px
+
+      br
+
+        @media screen and (max-width: 1200px)
+          display: none
+
   .navigation
+
     .container
       display: flex
       justify-content: space-between
       padding: 60px 0
       border-top 1px solid gray2
 
+      @media screen and (max-width: 1200px)
+        justify-content: center
+
     .sub
       color: gray_base
+
+      @media screen and (max-width: 1200px)
+        @extend .body .bold
+        display: block
+        color: blue_base;
+
+      & + .bold
+
+        @media screen and (max-width: 1200px)
+          display: none
+
 
     .bold
       color: blue_base
@@ -301,6 +340,14 @@
       display: table-cell
       width: 50%
 
+      &:empty
+        @media screen and (max-width: 769px)
+          display: none
+
+      @media screen and (max-width: 769px)
+        display: block
+        width: 100%
+
   .map
     height: 450px
 
@@ -329,6 +376,10 @@
   width: 455px
   padding: 43px 67px 32px
   background-color: blue_base
+  max-width: 100%
+
+  @media screen and (max-width: 769px)
+    padding: 40px 20px
 
   &__heading
     margin-bottom: 17px

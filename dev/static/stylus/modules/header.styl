@@ -8,7 +8,7 @@
   @media screen and (max-width: 1440px)
     padding: 25px 20px
 
-  @media screen and (max-width: 750px)
+  @media screen and (max-width: 769px)
     padding: 25px 15px 13px
 
   &__logo
@@ -20,7 +20,7 @@
     @media screen and (max-width: 1200px)
       flex-grow: 1
 
-    @media screen and (max-width: 750px)
+    @media screen and (max-width: 769px)
       text-align: center
 
   &__menu
@@ -47,6 +47,9 @@
         &_active
           color: gray_light2
 
+          @media screen and (max-width: 1200px)
+            color: blue_base
+
     @media screen and (max-width: 1200px)
       display: none
 
@@ -58,7 +61,7 @@
         right: 0
         z-index: 1
         height: calc(100% - 100px)
-        background: rgba(0, 0, 0, .7)
+        background: white
         padding-top: 30px
 
         .menu
@@ -72,7 +75,7 @@
 
             text-align: center
 
-    @media screen and (max-width: 750px)
+    @media screen and (max-width: 769px)
       top: 93px
 
   &__phone
@@ -96,22 +99,22 @@
 
         @extend .hover-opacity
 
-        @media screen and (max-width: 750px)
+        @media screen and (max-width: 769px)
           display: none
 
       &__btn
 
         .btn
 
-          @media screen and (max-width: 750px)
+          @media screen and (max-width: 769px)
             background-color: transparent
 
-          @media screen and (max-width: 1440px) and (min-width: 1201px), (max-width: 750px)
+          @media screen and (max-width: 1440px) and (min-width: 1201px), (max-width: 769px)
             font-size: 0
             width: 50px
 
           &::before
-            @media screen and (max-width: 1440px) and (min-width: 1201px), (max-width: 750px)
+            @media screen and (max-width: 1440px) and (min-width: 1201px), (max-width: 769px)
               content: ''
               display: block
               width: 50px
@@ -137,7 +140,7 @@
     @media screen and (max-width: 1200px)
       display: flex
 
-    @media screen and (max-width: 750px)
+    @media screen and (max-width: 769px)
       background-color: transparent
       margin-right: 0
 

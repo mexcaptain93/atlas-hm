@@ -6,6 +6,9 @@
   &__map
     margin-bottom: 76px
 
+    @media screen and (max-width: 769px)
+      margin-bottom: 40px
+
   &__heading
     margin-bottom: 19px
 
@@ -28,23 +31,49 @@
     margin-bottom: 30px
     border-bottom: 1px solid gray2
 
+    @media screen and (max-width: 769px)
+      flex-direction: column
+
   &__photo
     width: 455px;
     flex-shrink: 0;
+
+    @media screen and (max-width: 1200px)
+      width: 50%
+
+    @media screen and (max-width: 769px)
+      width: 100%
+      margin-bottom: 40px
 
   &__data
     width: 50%
     padding-top: 45px
     padding-left: 14px
 
+    @media screen and (max-width: 1200px)
+      padding-top: 0
+
+    @media screen and (max-width: 769px)
+      width: 100%
+      padding-left: 0
+
     .like-h4
       margin-bottom: 34px
 
+      @media screen and (max-width: 769px)
+        margin-bottom: 20px
+
     .item
+
+      @media screen and (max-width: 1200px)
+        margin-bottom: 20px
       
       &_address
         width: 100%
         margin-bottom: 34px
+
+        @media screen and (max-width: 1200px)
+          margin-bottom: 20px
 
         .item__title::before
           background-image: url('../img/general/contacts-address-green.png')
@@ -54,12 +83,18 @@
       &_email
         width: 196px
 
+        @media screen and (max-width: 1200px)
+          width: 100%
+
         .item__title::before
           background-image: url('../img/general/contacts-phone-green.png')
           width: 16px
           height: 16px
 
       &_phone
+
+        @media screen and (max-width: 1200px)
+          width: 100%
 
         .item__title::before
           background-image: url('../img/general/contacts-phone-green.png')
@@ -92,12 +127,22 @@
   &__form
     flex-shrink: 0;
 
+    @media screen and (max-width: 1200px)
+      margin: 0 auto
 
   &__descr-form
     display: flex
     align-items: flex-start
     margin-bottom: 60px
 
+    @media screen and (max-width: 1200px)
+      flex-direction: column
+
   &__descr
     padding-top: 40px
     padding-right: 138px
+
+    @media screen and (max-width: 1200px)
+      padding-top: 0
+      padding-right: 0
+      margin-bottom: 20px

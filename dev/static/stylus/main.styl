@@ -66,6 +66,7 @@ section
 
 .container
   max-width: containerWidthIndex
+  width: 100%
   margin: 0 auto
 
 
@@ -77,7 +78,11 @@ section
     align-items: stretch
 
     .container
-      width: containerWidthSidebar
+      max-width: containerWidthSidebar
+      width: 100%
+
+      @media screen and (max-width: 1200px)
+        max-width: 100%
 
   .content
     padding-top: 79px
@@ -85,11 +90,23 @@ section
     display: flex
     flex-direction: column
 
+    @media screen and (max-width: 769px)
+      padding-top: 60px
+
     & > .container
       flex-grow: 1
+      padding-left: 40px
+      padding-right: 40px
+
+      @media screen and (max-width: 769px)
+        padding-left: 15px
+        padding-right: 15px
 
   &__sidebar
     background-color: gray_light2
+
+    @media screen and (max-width: 1200px)
+      display: none
 
   &__content
     width: 100%
