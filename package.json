@@ -11,7 +11,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "github:gulpjs/gulp#v4.0.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-cheerio": "^0.6.2",
     "gulp-concat": "^2.6.1",
@@ -30,6 +30,8 @@
     "gulp-uglifyjs": "^0.6.2"
   },
   "dependencies": {
+    "gulp-minify-css": "^1.2.4",
+    "gulp.spritesmith": "^6.9.0",
     "normalize.css": "^7.0.0",
     "svg4everybody": "^2.1.8"
   }

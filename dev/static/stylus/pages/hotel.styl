@@ -7,16 +7,28 @@
     display: flex
     margin-bottom: 50px
 
+    @media screen and (max-width: 769px)
+      flex-direction: column
+      margin-bottom: 20px
 
 
     p
       width: 50%
 
+      @media screen and (max-width: 769px)
+        width: 100%
+
       &:nth-child(odd)
         padding-right: 15px
 
+        @media screen and (max-width: 769px)
+          padding-right: 0
+
       &:nth-child(even)
         padding-left: 15px
+
+        @media screen and (max-width: 769px)
+          padding-left: 0
 
     &_line
 
@@ -28,6 +40,7 @@
 
   &__data
     width: 945px
+    max-width: 100%
     margin: 0 auto 70px
 
     .like-h3
@@ -76,6 +89,10 @@
     display: flex
     margin-bottom: 80px
 
+    @media screen and (max-width: 769px)
+      flex-direction: column
+      margin-bottom: 20px
+
     &__item
       width: 360px
       height: 250px
@@ -85,6 +102,10 @@
       padding: 40px 10px
 
       text-align: center
+
+      @media screen and (max-width: 769px)
+        width: 100%
+
 
       &:nth-child(3n)
         margin-right: 0

@@ -8,6 +8,10 @@
     flex-wrap: wrap
     margin-bottom: 13px
 
+    @media screen and (max-width: 769px)
+      flex-wrap: nowrap
+      flex-direction: column
+
   .service
     display: flex
     flex-direction: column
@@ -18,6 +22,9 @@
     margin-right: 40px
     background-color: blue_base
     margin-bottom: 40px
+
+    @media screen and (max-width: 769px)
+      width: 100%
 
     @extend .body .capital-14
     line-height: 26px
@@ -60,8 +67,17 @@
     width: 100%
     margin-bottom: 33px
 
+
+
   &__item
-    width: 457px
+    width: calc(50% - 15px)
+    max-width: 100%
+
+    @media screen and (max-width: 1200px)
+      width: calc(50% - 15px)
+
+    @media screen and (max-width: 769px)
+      width: 100%
 
     .item
 
@@ -152,6 +168,9 @@
       color: gray_dark
       @extend .body .medium
 
+      @media screen and (max-width: 769px)
+        width: 100%
+
       img
         margin-right: 20px
 
@@ -162,6 +181,9 @@
 
       margin-bottom: 28px
 
+      @media screen and (max-width: 769px)
+        margin-bottom: 0
+
     &__item
       @extend .company__reasons .reasons__item
 
@@ -169,8 +191,19 @@
     display: flex
     margin-bottom: 120px
 
+    @media screen and (max-width: 769px)
+      flex-direction: column
+
     &__left
       padding-top: 46px
+
+      @media screen and (max-width: 1200px)
+        width: 50%
+
+      @media screen and (max-width: 769px)
+        width: 100%
+        margin-bottom: 20px
+
 
     &__heading
       padding-right: 10px
@@ -185,3 +218,14 @@
     &__image
       margin-left: 30px
       flex-shrink: 0
+
+      @media screen and (max-width: 1200px)
+        width: 50%
+
+      @media screen and (max-width: 769px)
+        width: 100%
+        margin-left: 0
+
+      img
+        display: block
+        margin: 0 auto
