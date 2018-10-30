@@ -156,6 +156,10 @@
     &_fb
       background-image: url('../img/general/fb.png')
 
+    &_in
+      background-image: url('../img/general/in.png')
+
+
   .arrow
     display: block
     width: 54px
@@ -279,10 +283,16 @@
       .arrow
         margin-right: 30px
 
+        @media screen and (max-width: 769px)
+          margin-right: 10px
+
     &__next
 
       .arrow
         margin-left: 30px
+
+        @media screen and (max-width: 769px)
+          margin-left: 10px
 
     &__next a
       display: flex
